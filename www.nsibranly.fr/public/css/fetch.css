@@ -1,0 +1,257 @@
+#upload{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+
+} 
+#upload form{
+    width:200px;
+    text-align:center;
+    border:1px solid black;
+    background-color: rgba(48, 46, 46,0.5);
+
+    border-radius: 10px;
+}
+#upload form input{
+    width:150px;
+    margin:10px;
+    padding:5px;
+    font-size:1rem;
+    font-style: italic;
+
+    border-radius:10px;
+}
+
+
+
+#upload form p {
+    word-break: break-all;
+}
+
+#reponseUpload{
+    text-align: left;
+}
+#reponseUpload>div{
+    border:1px solid red;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0,0.5);
+    margin:4px 0px;
+}
+#reponseUpload>div span{
+    text-decoration: underline;
+    word-break: break-all;
+}
+#reponseUpload>div p{
+    font-size: 0.8rem;
+    margin:2px 5px;
+}
+#reponseUpload>div img{
+    width:20px;
+    height:20px;
+    float:right;
+}
+
+
+
+#upload #depots{
+    width:calc(100% - 210px); 
+    border:1px solid black;
+    border-radius: 10px;
+    background: #FFF;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+#upload .divUpload {
+    margin:5px;
+    padding:2px;
+    width:calc(32% - 15px);
+    border:1px solid black;
+    border-radius: 10px;
+
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    gap:10px;
+    height: max-content;
+}
+
+#upload #depots .divUpload a {
+    font-size: 1rem;
+    text-decoration: none;
+    color:#302e2e;
+    word-break: break-all;
+}
+
+.divUpload div:first-child img  {
+    width:40px;
+    height:40px;
+
+}
+#upload #depots>div>div:first-child{
+    width:40px;
+    height:40px;
+
+}
+#upload #depots div p{
+    font-size: 1rem;
+    color:rgb(48, 46, 46);
+    word-break: break-all;
+
+
+}
+#upload #depots .hUpload  , #upload #depots .bUpload   {
+    height:20px;
+    width:40px;
+    border-radius: 5px;
+    position:relative;
+    top:-44px;
+    text-align: end;
+    transition-property: width, background-color;
+    transition-duration: 1s, 1s;
+
+}
+#upload #depots .bUpload  img  {
+    height:20px;
+    width:20px;
+    margin: 0 4px;
+
+}
+
+
+
+
+ #upload #depots .bUpload  img:hover  {
+    animation: effetHover2 500ms 0ms;
+
+}
+
+#upload #depots .hUpload  span  , #upload #depots .bUpload  span {
+    margin:0;
+    padding:0;
+    position: relative;
+    top: -2px;
+    display:none;
+    font-size: 0.9rem;
+    color:rgba(255, 255, 255,0);
+    transition-property: color;
+    transition-duration: 2s;
+    transition-delay: 1s;
+
+
+}
+#upload #depots .hUpload:hover  {
+    width:100px;
+    background-color: rgba(255, 0, 0,0.5);
+ 
+
+}
+ #upload #depots .bUpload:hover  {
+    width:100px;
+    background-color: rgba(0, 0, 255,0.5);
+
+
+}
+#upload #depots .hUpload:hover span , #upload #depots .bUpload:hover span {
+    display:inline;
+    color:rgba(255, 255, 255,1);
+
+
+}
+
+#upload #depots div a:hover{
+    animation: effetHover1 1000ms 0ms;
+}
+#upload #depots div img:hover{
+    animation: effetHover2 500ms 0ms;
+}
+
+
+
+.divUpload input{
+    width:120px;
+    height:18px;
+    margin:1px;
+    font-size:0.8rem;
+    border-radius:10px;
+}
+.divUpload span{
+    margin:1px;
+    font-size:0.8rem;
+}
+
+.divUpload div:last-child div {
+    display:flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+@keyframes effetHover1{
+    0% {
+        letter-spacing: 0.5px;
+    }
+    100% {
+        letter-spacing: 0px;
+    }
+     
+}
+@keyframes effetHover3{
+    0% {
+        letter-spacing: 0.5px;
+    }
+    100% {
+        letter-spacing: 0px;
+    }
+     
+}
+
+
+
+@keyframes effetHover2{
+    0% {
+        transform:scale(1.2);
+    }
+    50% {
+        transform:scale(1);
+    }
+    100% {
+        transform:scale(0.8);
+    }   
+}
+
+@media screen and (max-width: 1000px) {
+
+    #upload #depots .divUpload{
+        width:calc(48% - 10px);
+    }
+}
+
+
+
+@media screen and (max-width: 750px) {
+    #upload{
+        display:block;
+           
+    }
+    #upload form{
+        margin:auto;
+    }
+    #upload #depots{
+        width:100%; 
+    }
+    
+    #upload #depots .divUpload{
+        width:calc(48% - 10px);
+    }
+}
+@media screen and (max-width: 500px) {
+   
+    #upload #depots .divUpload{
+        width:calc(100% - 25px);
+    }
+}

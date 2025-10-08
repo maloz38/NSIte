@@ -1,0 +1,42 @@
+class Pile:
+    def __init__(self,nom = ''):
+        self.nom = nom
+        self.contenu = []
+
+
+
+    def __str__(self):
+        # Bottom
+        largeurM = 0
+        for elt in self.contenu:
+            if len(str(elt))>largeurM : largeurM = len(str(elt))
+        ch = '----'
+        for i in range(largeurM) :
+            ch = '-' + ch
+        # Middle
+        if self.contenu == [] :
+            ch = "| " + " |" + "\n" + ch
+        for elt in self.contenu:
+            l = len(str(elt))
+            nb = largeurM-l
+            middle = str(elt)
+            for i in range(nb//2) :
+                middle = ' ' + middle
+            for i in range(nb-nb//2) :
+                middle = middle + ' '
+            ch = "| " + middle + " |" + "\n" + ch
+        # Top
+        ch = f"\nEtat de la pile {self.nom} :\n\n" + ch
+        return ch
+
+# Main
+if __name__ == '__main__' :
+    p = Pile('Historique de navigation')
+    # p.empiler('https://www.nsibranly.com/')
+    # p.empiler('https://www.lyceebranly.com/')
+    # p.empiler('https://www.youtube.com/')
+    # p.empiler('https://www.google.com/')
+    print(p)
+
+
+

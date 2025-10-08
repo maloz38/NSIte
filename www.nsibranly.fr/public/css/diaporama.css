@@ -1,0 +1,54 @@
+.dia {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.information {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:80%;
+   
+}
+
+ 
+.info_contenu{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.info_contenu img{
+    display:block;
+    max-height: 600px;
+    border-radius: 25px;
+    max-width: 100%;
+    
+}
+
+.fleche_info {
+  
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.fleche_info img{
+    max-width : 10%;
+}
+
+
+
+
+@media screen and (max-width: 700px) { 
+
+    .information {
+       
+        width: 95%;
+       
+    }
+
+}
+

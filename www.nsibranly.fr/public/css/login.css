@@ -1,0 +1,329 @@
+body{background-color:#feebeb;}
+.logo a:hover {
+    color: #ed3838;
+  }
+nav a:hover{
+    color:#ed3838;
+}
+
+/* Début Css */
+.container{
+    display: grid;
+    gap:20px;
+    grid-template-columns: repeat(2 , minmax(50%,1fr));
+}
+
+.titre{
+    grid-column: 1;
+    grid-row: 1;
+    padding: 40px 20px;
+    line-height: normal;
+	font-family: 'Poppins-ExtraLight';
+    -serif;
+    font-weight: lighter;
+
+
+}
+.formulaire{
+    grid-column: 2;
+    grid-row: 1/3;
+    background-color: #ed3838;
+    font-family: "nbArchitektA";
+    color:#feebeb;
+    animation : auChargement 2000ms 100ms;
+    max-width:100%;
+
+}
+@keyframes auChargement {
+    0% {
+      transform:translateY(-40px)
+    }
+  
+    100%{
+      transform:translateY(0px)
+    }
+  
+  }
+.reseaux{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.titre h1{
+    font-size: 75px;
+    font-weight: bolder;
+}
+@media screen and (max-width: 950px) { 
+    section{
+        position:static;
+        width:auto;
+        margin:0px 20px;
+    }
+    .container{
+        display: block;
+    }
+    .formulaire{
+        max-width: 650px;
+        margin:auto;
+    }
+    .titre{
+        padding: 5px 10px;   
+    }
+    .titre h1{
+        margin: 20px 0;
+    }
+    .titre p{
+        margin:0;
+    }
+ 
+
+}
+@media screen and (max-width: 480px) { 
+
+    .titre h1{
+        font-size: 55px;
+        font-weight: bolder;
+
+    }
+
+}
+/* Gestion du formulaire */ 
+
+.formulaire>div:first-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+    align-items:center;
+}
+.formulaire>div:first-child p{
+    font-size: 4rem;
+    font-family: "Bohemian Cassidy Free";
+    margin:30px 0 0 0;
+    align-items: center;
+}
+@media screen and (max-width: 1140px) { 
+    .formulaire>div:first-child{
+        align-items: center;
+    }
+    .formulaire>div:first-child p{
+        font-size: 3rem;
+    }
+    .formulaire>div img{
+        width:80px;
+        height:80px;
+    }
+
+}
+@media screen and (max-width: 480px) { 
+
+    .formulaire>div:first-child p{
+        font-size: 2rem;
+    }
+    .formulaire>div img{
+        width:70px;
+        height:70px;
+    }
+
+}
+@media screen and (max-width: 330px) { 
+
+    .formulaire>div:first-child p{
+        font-size: 1.5rem;
+    }
+    .formulaire>div img{
+        width:50px;
+        height:50px;
+    }
+
+}
+@media screen and (max-width: 270px) { 
+
+    .formulaire>div:first-child p{
+        font-size: 1.4rem;
+        margin-top: 10px;
+
+    }
+    .formulaire>div img{
+        width:30px;
+        height:30px;
+    }
+
+}
+.champ{
+    padding:20px 20px;
+}
+@media screen and (max-width: 900px) { 
+    .champ{
+        padding:10px;
+    }
+}
+.champ:nth-last-child(n+3){
+    border-bottom: 1px solid #feebeb;
+
+}
+
+.champ label,.champ input{
+    display:block;
+    margin:10px 0;
+}
+
+.formulaire label{
+    color:#feebeb;
+    font-size: 0.8rem;
+
+
+}
+.formulaire input{
+    color:#feebeb;
+    font-size: 1.2rem;
+    background-color:transparent;
+    border-radius: 10px;
+    border:1px dashed #feebeb;
+    width:300px;
+    max-width: 100%;
+}
+
+.formulaire input:focus{
+    outline:1px solid;
+    box-shadow: -1px 2px 5px #302e2e,
+    0 -1px 0 white;
+}
+
+
+
+
+#nouveau_pass_1 , #nouveau_pass_2, #ancien_pass{
+    background-color:transparent;
+
+}
+
+
+.bouton{
+    font-size: 1rem;
+    border:1px solid #feebeb;
+    border-radius: inherit;
+    padding:5px;
+    text-align:center;
+}
+.bouton:hover , .formulaire textarea:hover   {
+    background-color: #feebeb;
+    color:#ed3838;
+    border: 1px solid transparent;
+	box-shadow: -1px 2px 5px #302e2e,
+                0 -1px 0 white;
+	transition: 1s;
+}
+.formulaire p{
+    padding:0 20px;
+    font-family: "Poppins";
+}
+@media screen and (max-width: 480px) { 
+    .bouton{
+        width:max-content;
+    }
+}
+
+/* ********* BAS *************/
+.containerBas{
+    margin:10px auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: wrap;
+}
+.containerBas .formulaire{
+    margin:10px 5px;
+    border-radius: 40px;
+    max-width: 400px;
+    border:1px solid black;
+}
+.containerBas .formulaire>div:first-child p{
+    font-size: 1.4rem;
+
+}
+.containerBas label{
+    word-wrap:break-word;
+}
+
+.containerBas #avatar{
+    width:50px;
+    height:50px;
+    margin:25px 25px 0 0;
+}
+
+.password-strength {
+    height: 10px;
+    width: 100%;
+    background-color: rgba(204, 204, 204 , 0.1);
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+
+#passView{
+    line-height: normal;
+    font-family: "nbArchitektA";
+
+}
+/* input paswword visible ou pas */
+
+.conteneurPass{
+    position:relative;
+    width:max-content;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:28px;
+    max-width: 100%;
+    border: 1px dashed #feebeb;
+    border-radius: 10px;
+
+}
+#pass_saisi , #nouveau_pass_1 , #nouveau_pass_2{
+    border: none;
+    width:268px;
+    padding-right: 32px;
+    
+}
+.oeil{
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor:pointer;
+    display: inline-block;
+    position:absolute;
+    right:0px;
+   }
+.c1 {
+    animation : oeil1 1000ms 100ms;
+}
+.c2 {
+    animation : oeil2 1000ms 100ms;
+}
+@keyframes oeil1 {
+    0% {
+      transform:scale(0.1, 0.1)
+    }
+    100%{
+      transform:scale(1, 1)
+    }
+  }
+@keyframes oeil2 {
+0% {
+    transform:scale(0.1, 0.1)
+}
+100%{
+    transform:scale(1, 1)
+}
+  }
+/**************************************/
+
+@media screen and (max-width: 480px) { 
+
+.containerBas .formulaire{
+    max-width: 100%;
+}
+/*
+.formulaire input{
+    font-size: 0.8rem;
+}
+*/
+}

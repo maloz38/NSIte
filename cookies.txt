@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.nsibranly.fr	TRUE	/	FALSE	1999999999	PHPSESSID	6e2dd6b025d4a5c8faa183fb5fa1fdc1
+

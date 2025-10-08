@@ -1,0 +1,52 @@
+from graphviz import Digraph
+graphe = Digraph(format = 'png' , filename = 'arbre')
+
+class File :
+    def __init__(self) :
+        self.l = []
+
+    def __str__(self) :
+        s = "file : "
+        for e in self.l : s += str(e) + " "
+        return s
+
+    def estVide(self) :
+        return self.l == []
+
+    def enfiler(self,e) :
+        self.l.append(e)
+
+    def defiler(self) :
+        if not self.estVide() :
+            return self.l.pop(0)
+
+class Noeud :
+    def __init__(self, v) :
+        self.etiquette = v
+        self.sag = None
+        self.sad = None
+
+    def view(self) :
+        graphe.clear()
+        l = [self]
+        n = 0
+        while l != [] :
+            n = n + 1
+            nd = l.pop(0)
+            nd.num = str(n)
+            graphe.node(nd.num , str(nd.etiquette))
+            if nd.sag != None :
+                l.append(nd.sag)
+            if nd.sad != None :
+                l.append(nd.sad)
+        l = [self]
+        while l != [] :
+            nd = l.pop(0)
+            if nd.sag != None :
+                graphe.edge(nd.num,nd.sag.num)
+                l.append(nd.sag)
+            if nd.sad != None :
+                graphe.edge(nd.num,nd.sad.num)
+                l.append(nd.sad)
+        graphe.view()
+

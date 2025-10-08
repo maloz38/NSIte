@@ -1,0 +1,56 @@
+.proj{
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap:10px;
+    border:1px solid black;
+    border-radius: 10px;
+    justify-items: center;
+    margin-bottom: 10px;
+}
+.proj div:nth-child(1){
+    align-self:flex-start;
+    font-family: "Silkscreen-Regular";
+}
+.proj div:nth-child(1):hover{
+    animation: effetHover 1000ms 0ms;
+}
+
+@keyframes effetHover{
+    0% {
+        letter-spacing: 5px;
+    }
+    50% {
+        letter-spacing: -5px;
+    }
+    100% {
+        letter-spacing: 1px;
+    }   
+}
+.proj div:nth-child(2){
+    align-self:center;
+    font-style: oblique;
+}
+.proj div:nth-child(3){
+    align-self:center;
+    font-family:"Bohemian Cassidy Free";
+}
+
+@media screen and (max-width: 750px) {      /* -------------traitement si écran de smart*/
+    .proj{
+        display:grid;
+        grid-template-columns: 1fr ;
+        
+    }
+    .proj div:nth-child(1){
+        justify-self:baseline;
+    }
+    .proj div:nth-child(2){
+        justify-self:center,
+    }
+    .proj div:nth-child(3){
+        justify-self:end;
+    }
+    
+
+
+}

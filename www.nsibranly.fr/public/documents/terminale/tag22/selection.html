@@ -1,0 +1,42 @@
+from random import randint
+from time import time
+
+def echange(liste , i , j) :
+    n = len(liste)-1
+    if i < 0 or i > n  : return False
+    if j < 0 or j > n  : return False
+    tmp = liste[i]
+    liste[i] = liste[j]
+    liste[j] = tmp
+    return True
+
+
+def triSelection(liste) :
+    n = len(liste)
+    for i in range(n-1) :
+        jMin = i
+        for j in range(i+1,n) :
+            if liste[j]<liste[jMin] :
+                jMin = j
+        echange(liste,i,jMin)
+
+# programme principal
+N =10000
+liste = [randint(-5*N , 5*N) for i in range(N)]
+if N < 100 : print('liste non triée : \n',liste)
+deb = time()
+triSelection(liste)
+fin = time()
+if N < 100 : print('liste triée : \n', liste)
+print(f"""liste de taille {N}
+temps de recherche = {fin-deb} s
+""")
+
+
+
+
+
+
+
+
+

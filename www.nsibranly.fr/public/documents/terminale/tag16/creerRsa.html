@@ -1,0 +1,58 @@
+from random import randint
+from math import *
+
+def premiers(n):
+    """
+        Retourne liste des nbres premiers < n
+    """
+    prem = [i for i in range(2,n+1)]
+    k=2
+    nRacine=sqrt(n)
+    while k < nRacine:
+        prem=[p for p in prem if p<=k or p%k!=0]
+        k=prem[prem.index(k)+1]
+    return prem
+
+
+def inverse(e,m) :
+    l = []
+    for d in range(1000) :
+        mult = (d*e)%m
+        dif = abs(mult - 1)
+        if dif < 0.1 :
+            l.append(d)
+    return l
+
+def eCalcul(m) :
+    l = []
+    for e in range(2,m) :
+        if inverse(e,m) != [] :
+            l.append(e)
+            return l
+    return l
+
+def dCalcul(e,m) :
+    return inverse(e,m)
+
+def cles(p,q) :
+    n = p*q
+    m = (p-1)*(q-1)
+    le = eCalcul(m)
+    #ie = randint(0,len(le)-1)
+    ie=0
+    e = le[ie]
+    ld = dCalcul(e,m)
+    #id = randint(0,len(ld)-1)
+    id=0
+    d = ld[id]
+    return ((n,e),(n,d))
+
+
+
+
+
+# Main
+(n,e),(n,d) = cles(21,37)
+print(f"publique : {(n,e)}\nprivée : {(n,d)}\n")
+
+

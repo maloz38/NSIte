@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="fr-FR"> 
+    
+<!-- Mirrored from www.nsibranly.fr/terminale by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Oct 2025 11:26:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <title>Séances Terminales</title>
+        <link rel="icon" type = "image/png" href="public/images/arobase.png"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width= device-width, initial-scale=1.0">
+        <meta name="keywords" content="lycée , branly , nsi , informatique ">
+            <link rel="stylesheet" href="public/css/template.css">    <link rel="stylesheet" href="public/css/avatar.css">    <link rel="stylesheet" href="public/css/seances.css">    <link rel="stylesheet" href="public/css/terminale.css">    <link rel="stylesheet" href="public/css/annales.css">    <link rel="stylesheet" href="public/css/projets.css">    <link rel="stylesheet" href="public/css/fetch.css">    <link rel="stylesheet" href="public/css/upload.css">    <link rel="stylesheet" href="public/css/triSelection.css">        <script src="public/js/template.js" defer></script><script src="https://www.youtube.com/iframe_api" defer></script><script src="public/js/video.js" defer></script><script src="public/js/seances.js" defer></script><script src="public/js/fetch.js" defer></script><script src="public/js/script_tri_selection.js" defer></script><script src="public/js/script_tri_insertion.js" defer></script>    </head>
+    <body>
+        <div class="sidebar-left"></div>
+        <div class="sidebar-right-on-white" >
+            <div>
+                <div class="col-top"><img src="public/images/arobase.png"  ></div>
+                <div class="col-mid"><h6 class="colophon">Designed in France. <br>Lycée Branly lyon © 2024</h6></div>
+                <div class="col-bot"><img src="public/images/imRight.svg" ></div>
+            </div>
+          
+        </div>
+        <div class="centrale">
+            <div>
+                <div class="logo">
+                    <h1><a href="index.html">Nsi Br<img src="public/images/arobase.png"  >nly</a> </h1>
+                </div>
+                <nav id="nav">
+                    <ul class="gauche">
+                        <li><a href="index.html" id=""><div> Accueil <span >(Vous êtes içi)</span></div><img src="public/images/fleche.png" alt=""></a></li>
+                        <li><a href='terminale.html' id='enCours'><div> Séances terminale <span >(Vous êtes içi)</span></div><img src='public/images/fleche.png' alt=''></a></li>                       
+                        <li><a href="terminale/web.html" id=""><div> Web terminale <span >(Vous êtes içi)</span></div><img src="public/images/fleche.png" alt=""></a></li>
+                        <li><a href="terminale/login.html" id=""><div> Login <span >(Vous êtes içi)</span></div><img src="public/images/fleche.png" alt=""></a></li>
+                 
+                    </ul>
+                    <ul class="centre">
+                        <li>Lycée Edouard Branly - 25, rue de Tourvielle 69005 Lyon France</li>
+                        <li>   
+                            <a href="http://www.lyceebranly.com/" target="_blank"><img src="public/images/lienLycee.png" alt="Lycée Branly"> / </a>
+                            <a href="https://www.youtube.com/channel/UCFTZ3KHK8u4z1GJhy1lQVzw/featured" target="_blank"><img src="public/images/lienYT.png" alt="Lycée Branly"> / </a>
+                            <a href="https://www.linkedin.com/school/lycée-edouard-branly/" target="_blank"><img src="public/images/lienLK.png" alt="Lycée Branly">  </a>
+
+                        </li>
+                    </ul>
+                    <ul class="droite">
+                        <li><b>08 Octobre  2025</b></li>
+                        <li id="met"></li>
+                    </ul>  
+                </nav>
+                <div id="menuNav2" >
+                    <img  src="public/images/menuNavOuv2.png" alt="menuOuvrir">
+                </div>
+                <nav2>
+                    <a href="index.html"><img src="public/images/arobase.png" alt="Arobase"></a>
+                    <ul>
+                            <li class=""><a href="index.html" >Accueil</a></li>
+                            <li class='enCours'><a href='terminale.html' > Séances </a></li>    
+                            <li class=""><a href="terminale/web.html" > Web </a></li>
+                            <li class=""><a href="terminale/login.html" > Login </a></li>
+                    </ul>
+                </nav2>
+            </div>
+        </div>
+
+
+                <!-- DEBUT DU CONTENU  DE  LA  PAGE -->
+    <style>
+        body{background-color:#f0ebdb;}
+    </style>
+    <section> 
+        <form class="confirmation_suppression" action="#" method="POST" id="formSup">
+            <p>Etes vous sûr de vouloir supprimer ce contenu ?</p>
+            <div class="fenetre_sup">
+                <input id="boutonSupprime"  type="submit" value="Valider" name="boutonSupprime" class="boutonsValider">
+                <input id="bouton_non"  type="button" value="Annuler" class="boutonsAnnuler" >
+                <input type='hidden' name = "idSupprime" id='idSupprime' value="">
+            </div>  
+        </form>
+        <div class="container">
+            <div class="row cf">
+                <div class="three col">
+                    <div class="loader" id="loader-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <!---------------------------DEBUT DES BLOCS--------------------------------------------------->       
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_1"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_1" > 
+                    <p>1 - Cryptologie : Partie 1</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                    On fait ici un historique de la cryptologie. On s'arrête à la machine Enigma conçue durant la seconde guerre mondiale.
+                    On revoie dans le même temps les bases de la programmation en python, déjà vues en classe de 1<sup>ère</sup> :
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li>Cours - Tp  (pdf) : 
+                            <a href="public/documents/terminale/tag1/Crypto.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag1/CryptoCorrige.pdf"target="_blank" ><button >Corrigé</button></a>
+                        </li>  
+                        <li>
+                            <a href="public/documents/terminale/tag1/texte.txt"target="_blank">Phrase à déchiffrer (algo Vigenere)</a>
+                        </li>    
+                        <li>
+                            <a href="public/documents/terminale/tag1/texte2.txt"target="_blank">Phrase à déchiffrer 2 (algo Vigenere)</a>
+                        </li>      
+                        <li>
+                            <a href="public/documents/terminale/tag1/bonus.pdf"target="_blank">Bonus</a>
+                        </li>      
+                        <li>Ds  (pdf) : 
+                            <a href="public/documents/terminale/tag1/DsCrypto.pdf"target="_blank" class="invisible"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag1/DsCryptoCorrige.pdf"target="_blank" class="invisible"><button >Corrigé</button></a>
+                        </li>                                
+                    </ul>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>QCM : </strong></legend>
+                    <ul>
+                        <li><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScfK0H60giQopotqa-TGYYOKlvsJ_NzhpQOZMD6Gkdo9di2YQ/viewform?usp=header">QCM 1</a></li>
+                    </ul>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Liens YouTube : </strong></legend>
+                        <div class="lect-video2" id="">
+        <div id="iframe1"></div>
+        <input type="hidden" value="YmeEz6cQrwM" id="iframeHidden1">
+        <p></p>
+    </div>                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Ressources :</strong> </legend>
+                    <ul>
+                        <li><a href = "public/documents/terminale/C1-Programmation.pdf"target="_blank">Généralités Python</a></li>
+                        <li><a href = "public/documents/terminale/C2_python_commentaires_formatage.pdf"target="_blank">print() et input()</a></li>
+                        <li><a href = "public/documents/terminale/C3_python_les%20boucles.pdf"target="_blank">Boucles for et while</a></li>
+                        <li><a href = "public/documents/terminale/C4_python_les_fonctions.pdf"target="_blank">def fct(): et return</a></li>
+                        <li><a href = "public/documents/terminale/C5_python_les_conteneurs.pdf"target="_blank">tuples, listes, dictionnaires, ensembles</a></li>
+                        <li><a href = "public/documents/terminale/C5_2_python_les_conteneurs_compl%c3%a9ments.pdf"target="_blank">Listes par compréhension, listes doubles</a></li>
+                        <li><a href = "public/documents/terminale/C8_complements_sur_les_tuples.pdf"target="_blank">fonctions : return de tuples</a></li>
+                        <li><a href = "public/documents/terminale/C6_python_les_fichiers.pdf"target="_blank">Gestion des fichiers</a></li>
+                        <li><a href = "public/documents/terminale/C7_python_les_chaines%20de%20caract%c3%a8res.pdf"target="_blank">Chaines de caractères : .join() , .split()</a></li>
+                    
+                    </ul>
+                </fieldset>
+            </div>  
+            <div class="tuile" id="theme_1" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Cryptologie<br>Partie 1</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_2"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_2" > 
+                    <p>2 - Minimum d'une liste et notion de complexité</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                    On aborde dans ce chapitre la notion de complexité appliqué à un algorithme de recherche du minimum d’une liste.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li>
+                            <a href="public/documents/terminale/tag2/quizzListes.pdf"target="_blank">Quizz sur les listes, tuple et dictionnaires</a>
+                        </li>
+                        <li>Cours - Tp  (pdf) : 
+                            <a href="public/documents/terminale/tag2/minimum.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag2/minimumCorrige.pdf"target="_blank" class=""><button >Corrigé</button></a>
+                        </li>                           
+                    </ul>
+                    
+                </fieldset>
+                <br>
+            </div>  
+            <div class="tuile" id="theme_2" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Minimum<br>d'une liste</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_3"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_3" > 
+                    <p>3 - Tri d'une liste par sélection</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                    On s’intéresse ici à un algorithme classique, utilisé pour trier les éléments d’une liste. On verra au cours de l'année 
+                    qu'il existe de nombreuses solutions pour réaliser ces tris.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li>Cours - Tp  (pdf) : 
+                            <a href="public/documents/terminale/tag3/triSelection.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag3/triSelectionCorrige.pdf"target="_blank" ><button >Corrigé</button></a>
+                        </li>  
+                        <li>Fichier <em>prénoms</em>  (zip) : 
+                            <a href="public/documents/terminale/tag3/prenoms.zip"target="_blank"><button>prenom.zip</button></a>
+                        </li>  
+                        <li>Exercice tri dictionnaire (pdf) : 
+                            <a href="public/documents/terminale/tag3/triSelectionExercice.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag3/triSelectionExerciceCorrige.pdf"target="_blank" class="invisible"><button >Corrigé</button></a>
+                        </li>
+                         <li>Exercice bonus (pdf) : 
+                            <a href="public/documents/terminale/tag3/exerciceSup.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag3/triSelectionExerciceCorrige.pdf"target="_blank" class="invisible"><button >Corrigé</button></a>
+                        </li>
+                        <li>Ds tri sélection + terminal commande (pdf) : 
+                            <a href="public/documents/terminale/tag3/dsTriCommandes2024.pdf"target="_blank" class="invisible"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag3/dsTriCommandes2024Corrige.pdf"target="_blank" class="invisible"><button >Corrigé</button></a>
+                        </li>
+                    </ul>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Simulateur :</strong> </legend>
+                    <div id="corps">
+                        <article>
+                            <p>
+                                Pour trier la liste ci-dessous, les différentes étapes 
+                                suivies par un algorithme du type "TRI PAR SELECTION" sont détaillées par le simulateur ci-dessous. 
+                                Cette liste est générée aléatoirement. En rechargeant cette page web, les valeurs de la liste sont 
+                                à chaque fois différentes.
+                            </p>
+                            <p>Cliquez sur le bouton "Manuel" pour dérouler les étapes à votre rythme et comprendre ces étapes d'exécution.</p>
+                            <p>Le bouton "Automate" enchaîne les étapes avec un intervalle de temps d'environ 3 secondes entre deux étapes 
+                            (vous pouvez réduire ce temps en cliquant sur la petite flèche du formulaire contenant le nombre 3000).  </p>
+                            <div class="bouton">
+                                <button id="etapeManuelle"> Manuel </button>
+                                <button id="automatique">Automate</button>
+                            </div>
+                            <br>
+                            <label for="intervalletemps">Pour accélérer l'automate, régler ici le temps (en ms) qui sépare deux étapes   :</label>
+                            <input type="number" id="intervalletemps" min="10" value="3000" step="100">
+                            <br> 
+                            <div id="demo">
+                                <table id="aranger">
+                                    <tr id="transit">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr id="liste">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p id="descriptif"> </p>
+                        </article>
+                    </div>
+                </fieldset>
+                <br>
+            </div>  
+            <div class="tuile" id="theme_3" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Tri d'une liste<br>par sélection</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_4"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_4" > 
+                    <p>4 - Terminal de commande Linux</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                    L’objectif de ce chapitre est de découvrir le monde des lignes de commandes que l’on écrit dans un terminal.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li>Cours - Tp  (pdf) : 
+                            <a href="public/documents/terminale/tag4/commandesLignes.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag4/Commandes_linux.pdf"target="_blank"><button>Cours  résumé</button></a>
+                            
+                        </li>                     
+                    </ul>
+                </fieldset>
+                <br>
+            </div>  
+            <div class="tuile" id="theme_4" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Commandes<br>en ligne</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_5"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_5" > 
+                    <p>5 - Tri d'une liste par insertion</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                        On s’intéresse ici à un autre algorithme classique, utilisé pour trier les éléments d’une liste : l'algorithme de tri par insertion.
+                    </p>
+
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li>Cours - Tp  (pdf) : 
+                            <a href="public/documents/terminale/tag5/triInsertion.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag5/triInsertionCorrige.pdf"target="_blank" class="invisible"><button >Corrigé</button></a>
+                        </li>  
+                        <li class="flex">
+                            <p>Tri de la liste [6,5,3,1,8,7,2,4] :</p>
+                            <img src="public/documents/terminale/tag5/insertion.gif" alt="">
+                        </li>
+                    </ul>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Simulateur :</strong> </legend>
+                    <div id="corps">
+                        <article>
+                            <p>
+                                Pour trier la liste ci-dessous, les différentes étapes 
+                                suivies par un algorithme du type "TRI PAR INSERTION" sont détaillées par le simulateur ci-dessous. 
+                                Cette liste est générée aléatoirement. En rechargeant cette page web, les valeurs de la liste sont 
+                                à chaque fois différentes.
+                            </p>
+                            <p>Cliquez sur le bouton "Manuel" pour dérouler les étapes à votre rythme et comprendre ces étapes d'exécution.</p>
+                            <p>Le bouton "Automate" enchaîne les étapes avec un intervalle de temps d'environ 3 secondes entre deux étapes 
+                            (vous pouvez réduire ce temps en cliquant sur la petite flèche du formulaire contenant le nombre 3000).  </p>
+                            <div class="bouton">
+                                <button id="etapeManuelle1"> Manuel </button>
+                                <button id="automatique1">Automate</button>
+                            </div>
+                            <br>
+                            <label for="intervalletemps1">Pour accélérer l'automate, régler ici le temps (en ms) qui sépare deux étapes   :</label>
+                            <input type="number" id="intervalletemps1" min="10" value="3000" step="100">
+                            <br> 
+                            <div id="demo">
+                                <table id="aranger">
+                                    <tr id="transit1">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr id="liste1">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p id="descriptif1"> </p>
+                        </article>
+                    </div>
+                </fieldset>
+                <br>
+            </div>  
+            <div class="tuile" id="theme_5" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Tri d'une liste<br>par Insertion</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_6"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_6" > 
+                    <p>6 - Recherche dichotomique</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                        L'objectif de ce chapitre est de découvrir un algorithme qui fonctionne suivant le paradigme de programmation <em>Diviser pour régner</em>. 
+                        Pour rechercher la présence d'une valeur précise dans une liste déjà triée, la solution naïve consiste à parcourir toute la liste. Pour des listes de grande taille, une recherche par dichotomie permet d'aller beaucoup plus vite.
+                        On voit ça dans ce chapitre. 
+                    </p>
+
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li>Cours - Tp  (pdf) : 
+                            <a href="public/documents/terminale/tag6/dichotomie.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag6/dictionnaire.zip"target="_blank"><button>zip à télécharger</button></a>
+                            <a href="public/documents/terminale/tag6/dichotomieCorrige.pdf"target="_blank" class="invisible"><button >Corrigé</button></a>
+                        </li>  
+
+                    </ul>
+                </fieldset>
+                <br>
+            </div>  
+            <div class="tuile" id="theme_6" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Recherche<br>dichotomique</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_7"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_7" > 
+                    <p>7 - Algorithme des k plus proches voisins </p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                    L’algorithme des k plus proches voisins, en anglais k-NN pour « k Nearest Neighbors » est un
+                     algorithme d’apprentissage supervisé qui permet à la fois de résoudre un problème de classification et de régression. 
+                    </p>
+
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li>Cours  (pdf) : 
+                            <a href="public/documents/terminale/tag7/kVoisins.pdf"target="_blank"><button>Enoncé</button></a>
+                        </li>  
+                        <li>Tp (Iris de Gaspesie) (pdf) : 
+                            <a href="public/documents/terminale/tag7/kVoisinsIris.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag7/iris.zip"target="_blank"><button>zip à télécharger</button></a>
+                            <a href="public/documents/terminale/tag7/kVoisinsIrisCorrige.pdf"target="_blank" class=""><button >Corrigé (pdf)</button></a>
+                            <a href="public/documents/terminale/tag7/iris.html"target="_blank" class=""><button >Corrigé (.py)</button></a>
+                        </li>  
+                        <li>Exercice (langue) (pdf) : 
+                            <a href="public/documents/terminale/tag7/Tp_k_VoisinsLanguesB.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag7/langues.html"target="_blank" class=""><button >Corrigé (.py)</button></a>
+                        </li>
+                        <li>Ds sur ordi (dicho + kVoisins + tri Insertion)  : 
+                            <a href="public/documents/terminale/tag7/sujet.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag7/sujet.zip"target="_blank" class=""><button >Fichiers utiles (.zip)</button></a>
+                            <a href="public/documents/terminale/tag7/dsKvoisinsDichoTriInsSurOrdi2024Corrige.pdf"target="_blank" class=""><button >Corrigé (.pdf)</button></a>
+                        </li>
+                    </ul>
+                </fieldset>
+                <br>
+            </div>  
+            <div class="tuile" id="theme_7" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>k proches<br>voisins</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_8"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_8" > 
+                    <p>8 - Programmation Orientée Objet </p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                    La Programmation Orientée Objet (POO) est un paradigme de programmation qui utilise des "objets" pour 
+                    représenter des données et des méthodes. Un objet est une instance d'une classe, qui peut être considérée
+                     comme un modèle ou un plan définissant les attributs et les comportements de l'objet.
+                    </p>
+
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li><u>Exercice 1 </u>: classes Cercle et Rectangle (pdf) : 
+                            <a href="public/documents/terminale/tag8/coursPoo2.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag8/coursPoo2Corrige.pdf"target="_blank"><button>Corrigé Rectangle</button></a>
+
+                        </li>  
+                        <li><u>Exercice 2 </u>: classe CompteBancaire (pdf) : 
+                            <a href="public/documents/terminale/tag8/exerciceCompteBancaire.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag8/exerciceCompteBancaireCorrige.pdf"target="_blank"><button>Corrigé</button></a>
+
+                        </li> 
+                        <li><u>Exercice 3 </u>: autres exercices (pdf) : 
+                            <a href="public/documents/terminale/tag8/td_poo.pdf"target="_blank"><button>Enoncé</button></a>
+                        </li>   
+                
+                    </ul>
+                </fieldset>
+                <br>
+            </div>  
+            <div class="tuile" id="theme_8" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Programmation<br>Objet</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_9"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_9" > 
+                    <p>9 - Algorithme GLOUTON </p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                    Les algorithmes Gloutons permettent d’apporter une réponse simple, mais non optimale, à des situations complexes.
+                      Ce type d’algorithme reste néanmoins assez efficace. 
+                    </p>
+
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li>Cours (pdf) : 
+                            <a href="public/documents/terminale/tag9/coursGlouton.pdf"target="_blank"><button>Enoncé</button></a>
+                        </li>  
+                        <li>Tp : distributeur snack (pdf) : 
+                            <a href="public/documents/terminale/tag9/distributeurObjetGlouton.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag9/distributeurObjetGloutonCorrige.pdf"target="_blank" class=""><button>Corrigé </button></a>
+
+                        </li>  
+                    </ul>
+                </fieldset>
+                <br>
+            </div>  
+            <div class="tuile" id="theme_9" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Algorithme<br>Glouton</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_10"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_10" > 
+                    <p>10 - Bases de données</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                     On voit dans ce chapitre ce qu'est une base de données et comment réaliser des requêtes SQL qui permettront d'en extraire 
+                     les données rapidement.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li><a href="public/documents/terminale/tag10/coursBdd.pdf"target="_blank">Poly de Cours - Bdd relationnelles (pdf)</a></li> 
+                        <li><a href="public/documents/terminale/tag10/coursSqlite.pdf"target="_blank">SGBD - SqLite 3 / Python (pdf)</a></li>       
+                        <li>Requêtes Sql sur DB Browser  (pdf) : 
+                            <a href="public/documents/terminale/tag10/tpDbBrowser.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag10/tpDbBrowserCorrige.pdf"target="_blank" class=""><button >Corrigé .pdf</button></a>
+                            <a href="public/documents/terminale/tag10/freeBranly.sql"target="_blank" class=""><button >Corrigé .sql</button></a>
+                        </li>
+                        <li>Requêtes Sql avec sqlite3 - python  (pdf) : 
+                            <a href="public/documents/terminale/tag10/freeBranlyPython.pdf"target="_blank"><button>Enoncé en pdf</button></a>
+                            <a href="public/documents/terminale/tag10/freeBranlyPython.docx"target="_blank" class=""><button >Fichier .docx à renvoyer</button></a>
+                        </li>      
+                        <li>Exercices Bdd  (pdf) : 
+                            <a href="public/documents/terminale/tag10/exercicesBdd.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag10/exercicesBddCorrige.pdf"target="_blank" class=""><button >Corrigé</button></a>
+                        </li>   
+                        <li>Tp Bibliothèque  (pdf) : 
+                            <a href="public/documents/terminale/tag10/tpBiblotheque.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag10/bibliotheque.html"target="_blank" class=""><button >Fichier bibliotheque.db</button></a>
+                            <a href="public/documents/terminale/tag10/tpBiblothequeCorrige.pdf"target="_blank" class=""><button >Corrige</button></a>
+                        </li>  
+                        <li>Tp Notes  (pdf) : 
+                            <a href="public/documents/terminale/tag10/tpNotes.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag10/tpNotes.html"target="_blank" class=""><button >Fichier tpNotes.py</button></a>
+                            <a href="public/documents/terminale/tag10/tpNotesCorrige.pdf"target="_blank" class=""><button >Corrige</button></a>
+                        </li>  
+                        <li>Test Bdd  (pdf) : 
+                            <a href="public/documents/terminale/tag10/TestBDD.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag10/TestBDDCorrige.pdf"target="_blank" class=""><button >Corrigé</button></a>
+                        </li>      
+                        <li>Ds Bdd + Poo (pdf) : 
+                            <a href="public/documents/terminale/tag10/dsPooBdd2024.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag10/dsPooBdd2024Corrige.pdf"target="_blank" class=""><button >Corrigé</button></a>
+                        </li>                                   
+                    </ul>
+                </fieldset>
+                <br>
+               
+            </div>  
+            <div class="tuile" id="theme_10" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Bases de<br>données</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_11"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_11" > 
+                    <p>11 - Fonctions logiques</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                        Les semi-conducteurs permettent de créer des portes logiques qui sont à la base du fonctionnement 
+                        des processeurs. On voit dans ce chapitre les fonctions logiques de base : OUI, NON, ET, OU et Ou exclusif. 
+                        On s'intéresse aux équations logiques, aux graphes de contacts et logiques.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li><a href="public/documents/terminale/tag11/coursBoole.pdf"target="_blank">Poly de Cours (pdf)</a></li> 
+                                      
+                    </ul>
+                </fieldset>
+                <br>
+               
+            </div>  
+            <div class="tuile" id="theme_11" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Fonctions<br>logiques</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_12"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_12" > 
+                    <p>12 - Les réseaux et les problèmes de routage</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                        On voit dans ce chapitre plusieurs problématiques liées aux réseaux.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li><a href="public/documents/terminale/tag12/coursReseaux.pdf"target="_blank">Poly cours réseaux (pdf)</a></li> 
+                        <li><a href="public/documents/terminale/tag12/coursRoutage.pdf"target="_blank">Poly cours routage (pdf)</a></li> 
+                        <li>Exercices adressage IP (pdf) : 
+                            <a href="public/documents/terminale/tag12/exercicesIp.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag12/tpDbBrowserCorrige.html"target="_blank" class="invisible"><button >Corrigé</button></a>
+                        </li>
+                        <li>Exercice routage d'une trame (pdf) : 
+                            <a href="public/documents/terminale/tag12/trameRoutage.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag12/trameRoutage.pdf"target="_blank" class="invisible"><button >Corrigé</button></a>
+                        </li>
+                        <li>Sujets Bac sur le routage (pdf) : 
+                            <a href="public/documents/terminale/tag12/tdRoutage.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag12/tdRoutage.pdf"target="_blank" class="invisible"><button >Corrigé</button></a>
+                        </li>
+                        <li>Tp Filius 1 (pdf) : 
+                            <a href="public/documents/terminale/tag12/TP_Filius.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag12/tpDbBrowserCorrige.html"target="_blank" class="invisible"><button >Corrigé</button></a>
+                        </li>             
+                        <li>Tp Filius 2 (pdf) : 
+                            <a href="public/documents/terminale/tag12/tpFilius2.pdf"target="_blank"><button>Enoncé (.pdf)</button></a>
+                            <a href="public/documents/terminale/tag12/tpFilius2.docx"target="_blank"><button>Enoncé (.doc)</button></a>
+                            <a href="public/documents/terminale/tag12/reseau.html"target="_blank" class=""><button >reseau.fls</button></a>
+                            <a href="public/documents/terminale/tag12/reseau2.html"target="_blank" class=""><button >reseau2.fls</button></a>
+                            <a href="public/documents/terminale/tag12/tpFilius2Corrige.pdf"target="_blank" class=""><button >Corrigé (pdf)</button></a>
+                        </li>          
+                        <li>Tp Filius 3 (pdf) : 
+                            <a href="public/documents/terminale/tag12/TP-Filius-Routage-Statique.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag12/reseau3.html"target="_blank" class=""><button >reseau3.fls</button></a>
+                            <a href="public/documents/terminale/tag12/tpFilus3Corrige.pdf"target="_blank" class=""><button >Corrigé (pdf)</button></a>
+
+                        </li>          
+                    </ul>
+                </fieldset>
+                <br>
+               
+            </div>  
+            <div class="tuile" id="theme_12" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Réseaux<br>Routage</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_13"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_13" > 
+                    <p>13 - Annales sujets bac Nsi avec Corrigés</p>
+                </div>
+                <br>
+                <fieldset >
+                    <legend ><strong>Modalités : </strong></legend>
+                    <p>
+                    L'épreuve terminale obligatoire de spécialité NSI est composée de deux parties : une partie écrite, comptant
+                     pour 12 points sur 20, et une partie pratique comptant pour 8 points sur 20. La note globale de l'épreuve est donnée sur 20 points.
+                     Ces épreuves sont passées dans le lycée d'origine durant la deuxième quinzaine de juin.
+                     <a href="https://www.education.gouv.fr/bo/2025/Hebdo4/MENE2433178N"target="_blank">Modalités de l'épreuves NSI pour 2025</a> 
+                    </p>
+                    
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Epreuve écrite sur 12 points : </strong></legend>
+                    <ul>
+                        <li><a href="https://www.math93.com/annales-du-bac/bac-specialite-nsi/annales-nsi-2021/1113-annales-du-bac-nsi-epreuve-ecrite-2021.html"target="_blank">Ecrit 2021</a></li> 
+                        <li><a href="https://www.math93.com/annales-du-bac/bac-specialite-nsi/annales-nsi-2022/nsi-ecrit-2022.html"target="_blank">Ecrit 2022</a></li> 
+                        <li><a href="https://www.math93.com/annales-du-bac/bac-specialite-nsi/annales-nsi-2023/nsi-ecrit-2023.html"target="_blank">Ecrit 2023</a></li> 
+                        <li><a href="https://www.math93.com/annales-du-bac/bac-specialite-nsi/annales-nsi-2024/nsi-ecrit-2024.html"target="_blank">Ecrit 2024</a></li> 
+                        <li><a href="https://www.math93.com/annales-du-bac/bac-specialite-nsi/annales-nsi-2025/nsi-ecrit-2025.html"target="_blank">Ecrit 2025</a></li> 
+
+                    </ul>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Epreuve pratique sur 8 points : </strong></legend>
+                    <ul>
+                        <li><a href="https://www.math93.com/annales-du-bac/bac-specialite-nsi/annales-nsi-2022/nsi-pratique-2022.html"target="_blank">Pratique 2022</a></li> 
+                        <li><a href="https://www.math93.com/annales-du-bac/bac-specialite-nsi/annales-nsi-2023/nsi-pratique-2023.html"target="_blank">Pratique 2023</a></li> 
+                        <li><a href="https://www.math93.com/annales-du-bac/bac-specialite-nsi/annales-nsi-2024/nsi-pratique-2024.html"target="_blank">Pratique 2024</a></li> 
+                        <li><a href="https://www.math93.com/annales-du-bac/bac-specialite-nsi/annales-nsi-2025/nsi-pratique-2025.html"target="_blank">Pratique 2025</a></li> 
+                        <li><a href="https://sujets.examens-concours.gouv.fr/delos/public/bgt/nsi"target="_blank">Banque des sujets de l'épreuve pratique de juin 2025</a></li> 
+                        <li><a href="public/documents/terminale/tag13/questionsPossibles.pdf"target="_blank">Exemples de questions pouvant être posées par l'examinateur</a></li> 
+                    </ul>
+                </fieldset>     
+                <fieldset >
+                    <legend ><strong>Le grand oral : </strong></legend>
+                    <p>
+                        En voie générale et technologique, les élèves passeront un Grand oral à la fin de l’année de terminale. Cette épreuve obligatoire 
+                        est notée sur 20 points et est valorisée par un coefficient 10 (en voie générale) ou 14 (en voie technologique).
+                        Le Grand oral dure 20 minutes avec 20 minutes de préparation. 
+                        <a href="https://www.math93.com/divers/corriges-du-bac-et-actualite-en-maths/1162-bac-2025-le-grand-oral.html"target="_blank">Le grand Oral 2025</a> 
+                    </p>
+                    <ul>
+                        <li><a href="public/documents/terminale/tag13/Comment%20d%c3%a9finir%20sa%20question.pdf"target="_blank">formulation de la question</a></li> 
+                        <li><a href="https://www.letudiant.fr/bac/nos-idees-de-sujets-pour-le-grand-oral-de-nsi.html"target="_blank">... sur le Site de l'étudiant</a></li> 
+                        <li><a href="https://www.capitainestudy.fr/articles/grand-oral-25-idees-de-sujets-en-nsi/"target="_blank">... sur le Site de Capitainestudy</a></li> 
+                        <li><a href="https://www.google.com/url?sa=t&amp;source=web&amp;rct=j&amp;opi=89978449&amp;url=https://eduscol.education.fr/media/3919/download&amp;ved=2ahUKEwirsqX10c2MAxW9VqQEHbq8A0sQFnoECB0QAQ&amp;usg=AOvVaw3PMK4Svo8mlXz8GoXezaJ1"target="_blank">... sur le le Site du ministère de l'E.N.</a></li> 
+                        <li><a href="https://kxs.fr/cours/grand-oral/exemples"target="_blank">... sur le Site kxs</a></li> 
+                        <li><a href="https://www.studyrama.com/revision-examen/bac/revisions-et-jour-j-tous-les-conseils-pour-reussir-son-bac/reussir-le-grand-oral/grand-oral-bac-idees-de-sujets-specialite-nsi"target="_blank">... sur le Site studyrama</a></li> 
+                        <li><a href="https://blog.apps.education.fr/articles/grand-oral-de-nsi2025-01-10t175551080z"target="_blank">... sur le blog de l'E.N.</a></li>
+                        <li><a href="https://novelclass.com/200-sujets-de-grand-oral"target="_blank">... sur le site de novelclass</a></li> 
+                        <li><a href="public/documents/terminale/tag13/Grand%20Oral.pdf"target="_blank">Bilan des oraux blancs</a></li>                        
+                      
+                    </ul>
+              
+                </fieldset>     
+            </div>  
+            <div class="tuile" id="theme_13" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Annales<br>Bac NSI</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_14"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_14" > 
+                    <p>14 - Piles et Files</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                        On découvre ici des structures de données linéaires appelées listes, dont nous voyons deux formes restreintes 
+                        très efficaces : les PILES et les FILES.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li><a href="public/documents/terminale/tag14/coursPilesFiles.pdf"target="_blank">Poly cours Piles-Files (pdf)</a></li> 
+                        <li>tp Piles - Files (pdf) : 
+                            <a href="public/documents/terminale/tag14/tpPilesFiles.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag14/pile.html"target="_blank" class=""><button >pile.py</button></a>
+                            <a href="public/documents/terminale/tag14/file.html"target="_blank" class=""><button >file.py</button></a>
+                            <a href="public/documents/terminale/tag14/sons.zip"target="_blank" class=""><button >sons.zip</button></a>
+                            <a href="public/documents/terminale/tag14/tpPilesFilesCorrige.pdf"target="_blank"><button>Corrigé</button></a>
+
+                        </li>
+                        <li>Exercices Piles - Files (pdf) : 
+                            <a href="public/documents/terminale/tag14/ExercicesPilesFiles.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag14/exercice2.html"target="_blank" class=""><button >exercice2.py</button></a>
+                            <a href="public/documents/terminale/tag14/ExercicesPilesFilesCorrige.pdf"target="_blank" class="invisible"><button>Corrigé</button></a>
+
+                        </li>
+                        <li>Ds Fcts logiques + Ip + Routage + Piles (pdf) : 
+                            <a href="public/documents/terminale/tag14/dsRoutage_PF_logique.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag14/dsRoutage_PF_logiqueCorrige.pdf"target="_blank" class=""><button>Corrigé</button></a>
+
+                        </li>
+                    </ul>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Liens YouTube : </strong></legend>
+                        <div class="lect-video2" id="">
+        <div id="iframe2"></div>
+        <input type="hidden" value="7fO0uXJTb4Q" id="iframeHidden2">
+        <p></p>
+    </div>                </fieldset>
+            </div>  
+            <div class="tuile" id="theme_14" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Piles<br>Files</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_15"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_15" > 
+                    <p>15 - Récursivité</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                    La récursivité est un concept fondamental en informatique qui met naturellement en pratique 
+                    un mode de pensée puissant qui consiste à pouvoir découper la tâche à réaliser en sous-tâches 
+                    de mêmes natures mais plus petites qui finalement sont simples à résoudre.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li><a href="public/documents/terminale/tag15/coursRecursivite.pdf"target="_blank">Poly cours Récursivité (pdf)</a></li> 
+                        <li>Exercices (pdf) : 
+                            <a href="public/documents/terminale/tag15/exercicesRecursivite.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag15/exercicesRecursiviteCorrige.pdf"target="_blank" class=""><button>Corrigé</button></a>
+                        </li>
+                        <li>Tours de Hanoï (pdf) : 
+                            <a href="public/documents/terminale/tag15/TP_Tours_Hanoi.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag15/tpHanoiCorrige.pdf"target="_blank" class=""><button>Corrigé</button></a>
+                        </li>
+                        <li>Fractale Gosper (pdf) : 
+                            <a href="public/documents/terminale/tag15/gosper.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag15/gosper.html"target="_blank" class=""><button>Corrigé (.py)</button></a>
+                        </li>
+                        <li>Autres exercices (pdf) : 
+                            <a href="public/documents/terminale/tag15/autreExercices.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag15/autreExercicesCorrige.pdf"target="_blank" class=""><button>Corrigé</button></a>
+                        </li>
+                        <li>Ds (pdf) : 
+                            <a href="public/documents/terminale/tag15/dsRecursivite.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag15/dsRecursiviteCorrige.pdf"target="_blank" class=""><button>Corrigé</button></a>
+                        </li>
+                    </ul>
+                </fieldset>
+                <br>
+            </div>  
+            <div class="tuile" id="theme_15" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>La <br>récursivité</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_16"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_16" > 
+                    <p>16 - Cryptologie - Partie 2</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                        On s'intresse ici au chiffrement asymétrique Rsa, aux protocoles tls, https. On voit aussi ce qu'est le hachage.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li><a href="public/documents/terminale/tag16/coursCrypto2.pdf"target="_blank">Poly cours (pdf)</a></li> 
+                        <li>Exercices (pdf) : 
+                            <a href="public/documents/terminale/tag16/exerciceRsa.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag16/exerciceRsaCorrige.pdf"target="_blank" class=""><button>Corrigé</button></a>
+                            <a href="public/documents/terminale/tag16/creerRsa.html"target="_blank" class=""><button>Fichier creerRsa.py</button></a>
+                        </li>
+                    </ul>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Liens YouTube : </strong></legend>
+                        <div class="lect-video2" id="">
+        <div id="iframe3"></div>
+        <input type="hidden" value="7W7WPMX7arI" id="iframeHidden3">
+        <p></p>
+    </div>                </fieldset>
+                <br>
+
+
+            </div>  
+            <div class="tuile" id="theme_16" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Cryptologie <br>Partie 2</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_17"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_17" > 
+                    <p>17 - Gestion des erreurs</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                        On voit ici ce qui se passe lorsque des erreurs sont relevées lors d'une exécution. On apprend à les 
+                        capturer avec une structure try .. except.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li><a href="public/documents/terminale/tag17/coursGestionErreurs.pdf"target="_blank">Poly cours (pdf)</a></li> 
+                        <li>Exercices (pdf) : 
+                            <a href="public/documents/terminale/tag17/exercicesGestionErreurs.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag17/exercicesGestionErreursCorrige.pdf"target="_blank" class=""><button>Corrigé</button></a>
+                        </li>
+                    </ul>
+                </fieldset>
+                <br>
+            </div>  
+            <div class="tuile" id="theme_17" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Gestion des<br>erreurs</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_18"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_18" > 
+                    <p>18 - Arbres binaires</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                        Les arbres sont des types abstraits très utilisés en informatique,
+                        notamment quand on a besoin d’une structure hiérarchique des données.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li><a href="public/documents/terminale/tag18/arbresBinairesCours.pdf"target="_blank">Poly cours (pdf)</a></li> 
+                        <li>Exercices (pdf) : 
+                            <a href="public/documents/terminale/tag18/exercicesArbres.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag18/arbreBinaire.html"target="_blank"><button>arbreBinaire.py</button></a>
+                            <a href="public/documents/terminale/tag18/exercicesArbresCorrige.pdf"target="_blank" class=""><button>Corrigé</button></a>
+                        </li>
+                        <li>Exercices Bac (pdf) : 
+                            <a href="public/documents/terminale/tag18/exercicesArbreBac.pdf"target="_blank"><button>Enoncé Bac</button></a>
+                            <a href="public/documents/terminale/tag18/exercicesArbreBacCorrige.pdf"target="_blank"><button>Corrigé</button></a>
+                            <a href="public/documents/terminale/tag18/exercice2.html"target="_blank"><button>exercice2.py</button></a>                       
+                        </li>
+                    </ul>
+                </fieldset>
+                <br>
+            </div>  
+            <div class="tuile" id="theme_18" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Arbres<br>binaires</p>
+            </div>
+        </div>     
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_19"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_19" > 
+                    <p>19 - Arbres binaires de recherche</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                    Les arbres binaires de recherche sont avant tout des arbres binaires. Ainsi toutes les techniques récursives 
+                    ou itératives vues dans le chapitre précédent, s’appliquent à cette sous-famille d’arbres binaire. 
+                    On voit dans ce chapitre des techniques supplémentaires qui sont spécifiques à ces ABR.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li><a href="public/documents/terminale/tag19/abrCours.pdf"target="_blank">Poly cours (pdf)</a></li> 
+                        <li>Exercices papier (pdf) : 
+                            <a href="public/documents/terminale/tag19/exercicesAbr2025.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag19/exercicesAbr2025.pdf"target="_blank" class="invisible"><button>Corrigé</button></a>
+                        </li>
+                        <li>Exercices ordi (pdf) : 
+                            <a href="public/documents/terminale/tag19/tpAbr2025.pdf"target="_blank" class=""><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag19/tpAbr2025Corrige.pdf"target="_blank" class=""><button>Corrigé</button></a>
+                            <a href="public/documents/terminale/tag19/abr.html"target="_blank" class=""><button>abr.py</button></a>
+                            <a href="public/documents/terminale/tag19/dictionnaire.html"target="_blank" download class=""><button>dictionnaire.py</button></a>
+                            <a href="public/documents/terminale/tag19/dictionnaire.txt" download  target="_blank" class=""><button>dictionnaire.txt</button></a>
+
+                        </li>
+                   
+                    </ul>
+                </fieldset>
+                <br>
+            </div>  
+            <div class="tuile" id="theme_19" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Arbres<br>ABR</p>
+            </div>
+        </div>  
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_20"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_20" > 
+                    <p>20 - Les graphes</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                        Dans ce chapitre, on se posera les questions suivantes. Comment implémente-t-on un graphe ? Utilise-t-on des listes, 
+                        des dictionnaires, la POO ?<br>
+                        L’implémentation étant définie, comment s’y prend-on pour parcourir tous les noeuds du graphe ?, pour rechercher les 
+                        différents chemins qui mènent à un noeud donné ?, pour rechercher le chemin le plus court ?.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li><a href="public/documents/terminale/tag20/graphesCours1.pdf"target="_blank">Poly cours - Implémentation (pdf)</a></li> 
+                        <li><a href="public/documents/terminale/tag20/graphesCoursParcours.pdf"target="_blank">Poly cours - Parcours (pdf)</a></li> 
+                        <li>Exercices papier (pdf) : 
+                            <a href="public/documents/terminale/tag20/graphesExercices.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag20/graphesExercicesCorrige.pdf"target="_blank" class=""><button>Corrigé</button></a>
+                        </li>
+                        <li>Tp implémentation (pdf) : 
+                            <a href="public/documents/terminale/tag20/tpImplementationGraphes.pdf"target="_blank" class=""><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag20/tpImplementationGraphesCorrige.pdf"target="_blank" class=""><button>Corrigé</button></a>
+                        </li>
+                        <li>Tp parcours (pdf) : 
+                            <a href="public/documents/terminale/tag20/tpParcoursGraphes.pdf"target="_blank" class=""><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag20/parcoursGraphe.zip"target="_blank" class=""><button>parcoursGraphe.zip</button></a>
+                            <a href="public/documents/terminale/tag20/tpParcoursGraphesCorrige.pdf"target="_blank" class=""><button>Corrigé</button></a>
+                        </li>
+                        <li>Dm : sujet bac (pdf) : 
+                            <a href="public/documents/terminale/tag20/dmGraphes.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag20/dmGraphesCorrige.pdf"target="_blank" class=""><button>Corrigé</button></a>
+                        </li>
+                        <li>Ds: sujet bac (pdf) : 
+                            <a href="public/documents/terminale/tag20/dsGraphes2025.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag20/dsGraphes2025Corrige.pdf"target="_blank" class=""><button>Corrigé</button></a>
+                        </li>
+                    </ul>
+                </fieldset>
+                <br>
+            </div>  
+            <div class="tuile" id="theme_20" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Les<br>graphes</p>
+            </div>
+        </div>    
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_21"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_21" > 
+                    <p>21 - Architecture - Processus</p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                        On s'interesse dans ce chapitre à l’architecture matérielle des ordinateurs et à leur système d'exploitation (OS).
+                        On voit plus particulièrement comment l'OS arrive à gèrer les processus des différentes applications qui tournent en même temps. 
+                        On termine par une présentation des puces Soc qui équipent de plus en plus de systèmes connectés.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li><a href="public/documents/terminale/tag21/archiCours.pdf"target="_blank">Poly cours (pdf)</a></li> 
+                        <li>Exercices papier (pdf) : 
+                            <a href="public/documents/terminale/tag21/exercicesArchi.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag21/exercicesArchi.pdf"target="_blank" class="invisible"><button>Corrigé</button></a>
+                        </li>
+                        <li>Tp ordi (pdf) : 
+                            <a href="public/documents/terminale/tag21/tpArchi.pdf"target="_blank" class=""><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag21/tpArchi.pdf"target="_blank" class="invisible"><button>Corrigé</button></a>
+                        </li>
+                    </ul>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Simulateurs : </strong></legend>
+                    <div class="videoRuban">
+                        <a href="https://circuitverse.org/simulator/embed/21530" target="_blank" class=""><img src="public/images/simu1.jpg" alt="image simulateur" title="Addition sur 1 bit"></a>
+                        <a href="https://circuitverse.org/simulator/embed/21553" target="_blank" class=""><img src="public/images/simu2.jpg" alt="image simulateur" title="Addition sur 4 bits"></a>
+                        <a href="https://circuitverse.org/simulator/embed/21556" target="_blank" class=""><img src="public/images/simu3.jpg" alt="image simulateur" title="Mémoire sur 1 bit"></a>
+                        <a href="https://circuitverse.org/simulator/embed/21557" target="_blank" class=""><img src="public/images/simu4.jpg" alt="image simulateur" title="Mémoire sur 1 octet"></a>
+
+                    
+                    
+                    
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Liens YouTube : </strong></legend>
+                    <div class="videoRuban">
+                            <div class="lect-video2" id="">
+        <div id="iframe4"></div>
+        <input type="hidden" value="Fs9WVyb2Ols" id="iframeHidden4">
+        <p>Les Processeurs - 7'40</p>
+    </div>                            <div class="lect-video2" id="">
+        <div id="iframe5"></div>
+        <input type="hidden" value="KsR7sZztx4U" id="iframeHidden5">
+        <p>Un étudiant de 19 ans construit son processeur - 11'30</p>
+    </div>                            <div class="lect-video2" id="">
+        <div id="iframe6"></div>
+        <input type="hidden" value="bADQkpjlWDQ" id="iframeHidden6">
+        <p>Un ordinateur quantique, est-ce le futur ? - 19'36</p>
+    </div>                            <div class="lect-video2" id="">
+        <div id="iframe7"></div>
+        <input type="hidden" value="uj9GA686ez8" id="iframeHidden7">
+        <p>Archives 1997 : mission Mars Pathfinder - 2'43</p>
+    </div>                    </div>
+
+                </fieldset>
+                <br>
+            </div>  
+            <div class="tuile" id="theme_21" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Architecture<br>Processus</p>
+            </div>
+        </div>    
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_22"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_22" > 
+                    <p>22 - Diviser pour régner </p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                        Diviser pour régner est un paradigme de programmation qui consiste à décomposer un problème complexe en 
+                        sous-problèmes qui seront individuellement plus simples à résoudre.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li><a href="public/documents/terminale/tag22/coursDiviserPourRegner.pdf"target="_blank">Poly cours (pdf)</a></li> 
+                        <li>Tri sélection (py) : 
+                            <a href="public/documents/terminale/tag22/selection.html"target="_blank"><button>code .py</button></a>
+                            <a href="public/documents/terminale/tag22/exercicesDiviserRegner.pdf"target="_blank" class="invisible"><button>Corrigé</button></a>
+                        </li>
+                        <li>Exercices papier (pdf) : 
+                            <a href="public/documents/terminale/tag22/exercicesDiviserRegner.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag22/exercicesDiviserRegnerCorrige.pdf"target="_blank" class=""><button>Corrigé</button></a>
+                        </li>
+                    
+                    </ul>
+                </fieldset>
+                <br>
+          
+            </div>  
+            <div class="tuile" id="theme_22" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Diviser pour<br>Régner</p>
+            </div>
+        </div>    
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_23"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_23" > 
+                    <p>23 - Recherche textuelle </p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                        Rechercher un motif dans un texte (Ctrl F) peut nécessiter un grand nombre de comparaisons. On voit dans ce chapitre 
+                        des méthodes qui permettent d'optimiser cette recherche.
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li>Cours rechercherche textuelle : 
+                            <a href="public/documents/terminale/tag23/coursRechercheTextuelle1.pdf"target="_blank"class="invisible" ><button>Cours</button></a>
+                            <a href="public/documents/terminale/tag23/coursRechercheTextuelle2.pdf"target="_blank"  class="invisible"><button>Cours</button></a>
+                            <a href="public/documents/terminale/tag23/coursRechercheTextuelle.pdf"target="_blank" ><button>Cours</button></a>
+                            <a href="public/documents/terminale/tag23/Le_rouge_et_le_noir.txt"target="_blank" download><button>Le_rouge_et_le_noir.txt</button></a>
+
+                        </li>
+                      
+                    
+                    </ul>
+                </fieldset>
+                <br>
+          
+            </div>  
+            <div class="tuile" id="theme_23" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Recherche<br>textuelle</p>
+            </div>
+        </div>    
+        <!---------------------------------------------------------------------------------------------->
+        <div class="bloc_ouvrant" >  
+                        <div class="contenu" id="contenu_24"	>
+                <div class = "titre_icone">
+                    <img src="public/images/icone_ferm2.png" alt="icone ouverture menu"  id="icone_fermeture_24" > 
+                    <p>24 - Programmation dynamique </p>
+                </div>
+                <fieldset >
+                    <legend ><strong>Contenu : </strong></legend>
+                    <p>
+                    Pour résoudre des problèmes de grande taille, pour lesquels une solution naïve serait 
+                    trop gourmande en ressources, il est nécessaire d’écrire son code en changeant de paradigme. 
+                    Parmi les paradigmes algorithmiques déjà vus, on peut citer l’algorithme glouton, les k plus
+                     proches voisins, diviser pour régner. On en voit ici un nouveau : la programmation dynamique. 
+                     D’une manière générale, il consiste à diviser un problème complexe en sous-problèmes dont la taille varie durant l’exécution.
+                      Les résultats de ces sous-problèmes sont mémorisés afin de pouvoir être réutilisés ensuite. 
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset >
+                    <legend ><strong>Documents : </strong></legend>
+                    <ul>
+                        <li>Cours programmation dynamique : 
+                            <a href="public/documents/terminale/tag24/coursProgrammationDynamique.pdf"target="_blank"class="" ><button>Cours</button></a>
+                            <a href="public/documents/terminale/tag24/coursProgrammationDynamiqueCorrige.pdf"target="_blank"class="" ><button>Cours corrigé</button></a>
+
+                        </li>
+                        <li>Tp redimensionnement image (pdf) : 
+                            <a href="public/documents/terminale/tag24/tp1.pdf"target="_blank"><button>tp1</button></a>
+                            <a href="public/documents/terminale/tag24/tp2.pdf"target="_blank"><button>tp2</button></a>
+                            <a href="public/documents/terminale/tag24/redim.zip"target="_blank"><button>redim.zip</button></a>
+                            <a href="public/documents/terminale/tag24/tp1Corrige.pdf"target="_blank" class = ""><button>tp1 corrigé</button></a>
+                            <a href="public/documents/terminale/tag24/tp2Corrige.pdf"target="_blank" class = ""><button>tp2 corrigé</button></a>
+
+                        </li>
+                        <li>Bac Blanc (pdf) : 
+                            <a href="public/documents/terminale/tag24/nsiMetropole2_2024.pdf"target="_blank"><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag24/bbCorrige.pdf"target="_blank"><button>Corrigé</button></a>
+                        </li>
+                        <li>Ds Programmation Dynamique(pdf) : 
+                            <a href="public/documents/terminale/tag24/dsProgDyn.pdf"target="_blank" class = ""><button>Enoncé</button></a>
+                            <a href="public/documents/terminale/tag24/dsProgDynCorrige.pdf"target="_blank" class = ""><button>Corrigé</button></a>
+                        </li>
+                    </ul>
+                </fieldset>
+                <br>
+          
+            </div>  
+            <div class="tuile" id="theme_24" >
+                <img class="logo_tuile" src="public/images/numerisation.png" alt="logo">
+                <p>Programmation<br>dynamique</p>
+            </div>
+        </div>    
+        <!---------------------------------------------------------------------------------------------->
+        
+        <!--------------------------FIN DES BLOCS-------------------------------------------------------->
+        
+        <input type="hidden" value = "24" id="nombre_tags">
+                <input type="hidden" value = "0" id="ouverture">
+        <input type="hidden" value = "terminale" id="niveau">
+        <input type='hidden' value= 7 id='nombreIframe'>
+    </section>       
+
+
+        <div class="footer">
+            <div>
+                <div class="logo">
+                    <h1><a href="index.html">Nsi Br<img src="public/images/arobase.png"  >nly</a> </h1>
+                </div>
+                <nav> 
+                    <ul class="gauche">
+                        <li><a href="index.html"> Accueil<img src="public/images/fleche.png" alt=""></a></li>
+                        <li><a href='terminale.html'> Séances <img src='public/images/fleche.png' alt=''></a></li>                       
+                        <li><a href="terminale/web.html" > Web <img src="public/images/fleche.png" alt=""></a></li>
+                        <li><a href="terminale/login.html" >Login <img src="public/images/fleche.png" alt=""></a></li>
+                    </ul>
+                    <ul class="centre">
+                        <li>Lycée Edouard Branly - 25, rue de Tourvielle 69005 Lyon France</li>
+                        <li>   
+                            <a href="http://www.lyceebranly.com/" target="_blank"><img src="public/images/lienLycee.png" alt="Lycée Branly"> / </a>
+                            <a href="https://www.youtube.com/channel/UCFTZ3KHK8u4z1GJhy1lQVzw/featured" target="_blank"><img src="public/images/lienYT.png" alt="Lycée Branly"> / </a>
+                            <a href="https://www.linkedin.com/school/lycée-edouard-branly/" target="_blank"><img src="public/images/lienLK.png" alt="Lycée Branly"> / </a>
+
+                        </li>
+                    </ul>
+                    <ul class="droite">
+                        <li><b>08 Octobre  2025</b></li>
+                        <li id="met"></li>
+                    </ul>  
+                </nav>
+            </div>
+        </div>
+
+    </body>
+
+
+<!-- Mirrored from www.nsibranly.fr/terminale by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Oct 2025 11:27:52 GMT -->
+</html>
+</html>

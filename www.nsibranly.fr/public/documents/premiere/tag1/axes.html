@@ -1,0 +1,59 @@
+from turtle import *
+
+# Configuration de la fenêtre
+speed(0)
+hideturtle()
+bgcolor("white")
+
+# Paramètres
+width = 400   # longueur des axes
+height = 400
+step = 50     # distance entre les graduations
+
+# Fonction pour dessiner un axe avec flèche et graduations
+def draw_axes():
+    # width, height = screensize()
+    width = window_width()//2
+    height = window_height()//2
+    # Axe X
+    penup()
+    goto(-width//2, 0)
+    pendown()
+    forward(width)
+
+    # Flèche X
+    right(150)
+    forward(10)
+    backward(10)
+    left(300)
+    forward(10)
+    backward(10)
+    right(150)
+
+    # Axe Y
+    penup()
+    goto(0, -height//2)
+    pendown()
+    setheading(90)
+    forward(height)
+
+    # Flèche Y
+    right(150)
+    forward(10)
+    backward(10)
+    left(300)
+    forward(10)
+    backward(10)
+    right(150)
+
+    penup()
+    goto(0,0)
+    right(90)
+    pendown()
+
+
+
+draw_axes()
+
+
+mainloop()

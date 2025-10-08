@@ -1,0 +1,13 @@
+.annalesMobile{
+    display:none;
+}
+
+
+@media screen and (max-width: 500px) {
+    .annalesOrdi{
+        display:none;
+    }
+    .annalesMobile{
+        display:block;
+    }
+}

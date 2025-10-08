@@ -1,0 +1,39 @@
+#descriptif , #descriptif1  {
+    min-height: 50px;
+}
+
+
+
+.bouton button{
+    background-color: #fff;
+    color :#000;
+    border-radius: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding:5px;
+    margin:10px;
+}
+.bouton button:hover {
+    background-color: #000;
+    color:#fff;
+    border: 1px solid transparent;
+	box-shadow: -1px 2px 5px #302e2e,
+                0 -1px 0 white;
+	transition: 1s;
+}
+
+@media screen and (max-width: 350px) {
+    #demo , #demo1{
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 300px) {
+    #demo , #demo1{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 280px) {
+    #demo , #demo1{
+        font-size: 0.7rem;
+    }
+}

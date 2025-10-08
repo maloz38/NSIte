@@ -1,0 +1,44 @@
+import time
+from random import randint
+import vlc
+"""
+    si la bibliothèque vlc n'est pas installée sur le poste,
+    exécuter dans la console : pip install python-vlc
+    Si pb, mettre à jour pip :
+    pip install --user --upgrade pip
+    fermer pyzo et ouvrir à nouveau
+    pip install python-vlc
+"""
+
+def creer_file_vide() :
+    return []
+
+
+
+def afficher(f,nom = '') :
+    # Top et Bottom
+    titre = f"\nEtat de la file {nom} :\n "
+    bord = '---'
+    for elt in f :
+        bord = bord + '--'
+        for c in str(elt) :
+            bord = bord + '-'
+    bord = bord + '-'
+    # Middle
+    corps = ''
+    for elt in f :
+        if corps != '' : corps = '--' + corps
+        corps = str(elt) + corps
+    corps = ' -> --' + corps
+    # Reconstitution
+    ch = titre + '\n' + bord + '\n' + corps + '\n' + bord
+    print(ch)
+
+
+# Main
+if __name__ == '__main__' :
+    f = creer_file_vide()
+    # enfiler(f,'nsi.jpg')
+    # enfiler(f,'memoire.doc')
+    # enfiler(f,'informatique.docx')
+    # afficher(f,'Spooler imprimante Epson')

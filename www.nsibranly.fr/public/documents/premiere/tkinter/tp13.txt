@@ -1,0 +1,85 @@
+# Modules ---------------------------------------------------------------
+from tkinter import Tk , Canvas , Label , Text , Button
+from PIL import Image, ImageTk   # pip install pillow
+from random import randint
+
+# Fonctions ---------------------------------------------------------------
+def creer_fenetre() :
+    fenetre = Tk()
+    fenetre.title("tp11")
+    return fenetre
+
+def creer_widgets() :
+    zone_graphique = Canvas(fenetre, width=1000, height=600 , bg = 'black')
+    zone_graphique.grid(row = 0 , column = 0 , columnspan = 3 )
+
+    mon_texte = Label(fenetre, text = "Entre un mot : ")
+    mon_texte.grid(row = 1 , column = 0)
+
+    champ_saisie = Text(fenetre , height = 1 , width = 14)
+    champ_saisie.grid(row = 1 , column = 1)
+
+    bouton_valider = Button(fenetre, text = "Valider" , width = 12 , command = debut)
+    bouton_valider.grid(row = 1, column = 2)
+
+    return zone_graphique, mon_texte, champ_saisie, bouton_valider
+
+
+def creation_dictionnaire_pic():
+    i = 0
+    for c in "abcdefghijklmnopqrstuvwxyz " :
+        fichier = "l_"+str(i)+".png"
+        i = i + 1
+        pic[c] = ImageTk.PhotoImage(Image.open(fichier) , master = fenetre)
+
+
+def debut():
+    global n
+    mot = champ_saisie.get("1.0", "end-1c")
+    if n < 6 :
+        i = 0
+        for lettre in mot :
+            num = zone_graphique.create_image(100 + 80*i, 10 + 100*n ,anchor = "nw",image = pic[lettre])
+            picsDansCanvas.append(num)
+            i = i + 1
+    n = n + 1
+
+def efface_image(event):
+    if (picsDansCanvas != []) :
+        # on n'affiche plus la dernière image de picsDansCanvas[] dans le canvasZ
+        num = picsDansCanvas[-1]
+        zone_graphique.delete(num)
+        # on supprime cette image de la liste picsDansCanvas[]
+        del(picsDansCanvas[-1])
+
+def efface_tout(event):
+    global n
+    for i in range(len(picsDansCanvas)) :
+        num = picsDansCanvas[i]
+        zone_graphique.delete(num)
+    del(picsDansCanvas[:])
+    n = 0
+
+
+
+
+# Main ---------------------------------------------------------------
+pic = {}
+picsDansCanvas = []
+n = 0
+
+fenetre = creer_fenetre()
+zone_graphique,mon_texte,champ_saisie,bouton_valider = creer_widgets()
+
+creation_dictionnaire_pic()
+
+fenetre.bind("<Down>",efface_image)
+fenetre.bind("<Up>",efface_tout)
+
+
+fenetre.mainloop()
+
+
+
+
+

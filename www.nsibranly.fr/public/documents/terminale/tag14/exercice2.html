@@ -1,0 +1,55 @@
+class File:
+    def __init__(self,nom=''):
+        self.nom = nom
+        self.contenu = []
+
+    def enfiler(self, valeur):
+        self.contenu.append(valeur)
+
+    def estVide(self):
+        return self.contenu == []
+
+    def defiler(self):
+        if not self.estVide():
+            return self.contenu.pop(0)
+
+    def taille(self):
+        return len(self.contenu)
+
+    def tete(self) :
+        if not self.estVide():
+            return self.contenu[0]
+
+    def vider(self) :
+        self.contenu = []
+
+    def __str__(self):
+        # Top et Bottom
+        titre = f"\nEtat de la file {self.nom} :\n "
+        bord = '-----'
+        for elt in self.contenu :
+            bord = bord + '--'
+            for c in str(elt) :
+                bord = bord + '--'
+        bord = bord + '-'
+        # Middle
+        corps = ''
+        for elt in self.contenu:
+            if corps != '' : corps = '--' + corps
+            corps = '('+str(elt)+')' + corps
+        corps = ' -> --' + corps
+        # Reconstitution
+        ch = titre + '\n' + bord + '\n' + corps + '\n' + bord
+        return ch
+
+
+
+# Main
+if __name__ == '__main__' :
+    from random import randint
+
+
+
+
+
+

@@ -1,0 +1,106 @@
+import sqlite3
+connexion = sqlite3.connect("tpNotes.db")
+#si on veut travailler sans fichier .db, dans la mémoire vive
+#connexion = sqlite3.connect(":memory:")
+curseur = connexion.cursor()
+curseur.execute("PRAGMA foreign_keys = ON") # Active les clés étrangères
+
+
+def remplissageBDD() :
+    curseur.executescript("""
+                            DROP TABLE IF EXISTS ds  ;
+                            DROP TABLE IF EXISTS eleves ;
+                            DROP TABLE IF EXISTS evaluations   ;
+                        """)
+    connexion.commit()
+
+
+    curseur.executescript("""
+                            -- Requete 1 :
+                            CREATE TABLE eleves  (
+                                id_eleve INTEGER PRIMARY KEY,
+                                nom TEXT,
+                                prenom INTEGER,
+                                num_classe TEXT
+                            ) ;
+
+                            -- Requete 2 :
+                            CREATE TABLE evaluations  (
+                                id_evaluation INTEGER PRIMARY KEY ,
+                                matiere TEXT,
+                                sujet TEXT,
+                                date TEXT
+                            ) ;
+
+                                -- Requete 3 :
+                                CREATE TABLE ds  (
+                                    id_eleve INTEGER  ,
+                                    id_evaluation INTEGER  ,
+                                    note INTEGER,
+                                    PRIMARY KEY (id_eleve,id_evaluation),
+                                    FOREIGN KEY(id_eleve) REFERENCES eleves(id_eleve),
+                                    FOREIGN KEY(id_evaluation) REFERENCES evaluations(id_evaluation)
+                                ) ;
+                    """)
+    connexion.commit()
+
+    donnees = [
+                (1,"ANGO","Ciana","TG1"),
+                (2,"BALANDIER","Julien","TG1"),
+                (3,"BAUDIN","Baptiste","TG4"),
+                (4,"CUOQ","Pierre","TG1"),
+                (5,"HENIN","Arthur","TG4"),
+                (6,"INEZA","Heman","TG1"),
+                (7,"JOANNES","Robin","TG2"),
+                (8,"OUSTRIC","Clément","TG3"),
+                (9,"PARNET","Justine","TG2"),
+                (10,"PHA","Ysaac","TG2"),
+                (11,"PICHON","Anaïs","TG1"),
+                (12,"PICHOUD","Guillaume","TG3"),
+                (13,"PINTO FERNANDES","Oscar","TG3"),
+                (14,"QUIRINO","Quianne","TG1"),
+                (15,"SKOROBULATOVA SIMONARD","Peter","TG2"),
+                (16,"THETCHAROEN","Matisse","TG3"),
+                (17,"TOUL","Jérémy","TG4"),
+                (18,"VALLIN","Malone","TG1")
+            ]
+    curseur.executemany("""
+                                -- Requete 4 :
+                                INSERT INTO eleves(id_eleve,nom,prenom,num_classe) VALUES (?,?,?,?)""",donnees)
+    curseur.executescript("""
+                                -- Requete 5 :
+                                INSERT INTO evaluations VALUES
+                                (147,"maths","Géométrie vectorielle","04-10-2024"),
+                                (247,"philo","La liberté","07-10-2024"),
+                                (23,"histoire","La guerre d'algérie","15-10-2024"),
+                                (199,"eps","cycle volley","06-11-2024"),
+                                (18,"nsi","poo","12-11-2024");
+
+                                -- Requete 6 :
+                                INSERT INTO ds VALUES
+                                (1,147,17),
+                                (1,18,12),
+                                (2,147,9),
+                                (2,18,14),
+                                (3,147,19),
+                                (3,18,2),
+                                (4,147,7),
+                                (4,18,14),
+                                (5,147,15),
+                                (5,18,15),
+                                (6,147,11),
+                                (6,18,10);
+                        """)
+    connexion.commit()
+
+
+def rechercheNotes() :
+    saisie = input("Entre un nom d'élèves : ")
+    saisie = saisie.upper()
+    saisie2 = '%'+saisie+'%'
+    # Exécution des requêtes de sélection
+
+
+# Main
+remplissageBDD()
+

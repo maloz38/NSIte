@@ -1,0 +1,135 @@
+from math import sqrt
+from matplotlib.pyplot import legend,grid,show,scatter,xlim,ylim
+        # pip install matplotlib (si blbli non installée)
+
+
+def donneesLangues(l : list) -> list:
+    """
+    Paramètres : liste de listes échantillon  (list)
+    Sortie : liste de liste dont les éléments sont les lignes du fichier
+    """
+    liste = []
+    for elt in l :
+        ll = [len(elt[0]),nb_voyelle(elt[0]),elt[0],elt[1],None]
+        liste.append(ll)
+    return liste
+
+def nb_voyelle(mot) :
+    '''
+        Argument : mot est une chaine de caractère (string)
+        Renvoie le nombre de voyelle de mot (int)
+    '''
+    voyelles = "aeiouy"
+    n = 0
+    for c in mot :
+        if c in voyelles : n = n + 1
+    return n
+
+def distance(lA , lB):
+    """
+    Paramètres : lA et lB:listes de 4 attributs placés en début de liste
+    Sortie : distance euclidienne pour ces 4 attributs
+    """
+    d = 0
+    for i in range(0,2) :
+        d = d + ( lA[i] - lB[i] )**2
+    return sqrt(d)
+
+def echange(liste , i , j) :
+    n = len(liste)-1
+    if i < 0 or i > n  : return False
+    if j < 0 or j > n  : return False
+    tmp = liste[i]
+    liste[i] = liste[j]
+    liste[j] = tmp
+    return True
+
+
+def triSelection(liste,k) :
+    n = len(liste)
+    for i in range(k) :
+        jMin = i
+        for j in range(i+1,n) :
+            if liste[j][-1]<liste[jMin][-1] :
+                jMin = j
+        echange(liste,i,jMin)
+
+
+def graphique(nom,couleur) :
+    X = []
+    Y = []
+    for i in range(len(donnees)) :
+        if donnees[i][-2] == nom :
+            X.append(donnees[i][0])
+            Y.append(donnees[i][1])
+    scatter(X,Y,c=couleur,label=nom)
+
+def graphiqueResultat(nom,couleur,k) :
+    X = []
+    Y = []
+    for i in range(k) :
+        X.append(donnees[i][0])
+        Y.append(donnees[i][1])
+    scatter(X,Y,c=couleur,label=nom,marker="x")
+
+def nuage(inconnue,k):
+    graphique("fr",'blue')
+    graphique("al",'red')
+    graphiqueResultat("kVoisins",'black',k)
+    scatter(inconnue[0],inconnue[1],c="yellow",label="inconnue")
+    xlim(0, 12)
+    ylim(0, 6)
+    legend()
+    grid(True)
+    show()
+
+def ecritureConsole(k) :
+    dic = {"fr":0 ,"al":0}
+    for i in range(k) :
+        nom = donnees[i][3]
+        dic[nom] = dic[nom] + 1
+    cleMax = "fr"
+    if dic[cleMax] < dic["al"] : cleMax = "al"
+    resultat =f"""
+Nombres de voisins français : {dic['fr']}
+Nombres de voisins allemand : {dic['al']}
+La langue inconnue est : {cleMax}
+"""
+    return resultat
+
+
+
+def kVoisins(mot,k) :
+    """
+    Paramètres :inconnue, liste contenant les attibuts de la fleur inconnue
+                k (int), nombre des plus proches voisins
+    Sortie : aucun renvoi
+    """
+    inconnue = [len(mot),nb_voyelle(mot),mot,"inconnue"]
+    for i in range(len(donnees)) :
+        d = distance(donnees[i],inconnue)
+        donnees[i][-1] = d
+    triSelection(donnees,k)
+    resultat = ecritureConsole(k)
+    print(resultat)
+    nuage(inconnue,k)
+
+
+# Main
+petit_echantillon = [
+    ["hiver","fr"],
+    ["loup","fr"],
+    ["reines","fr"],
+    ["nordique","fr"],
+    ["winter","al"],
+    ["schloss","al"],
+    ["koniginnen","al"],
+    ["nordisch","al"]
+]
+donnees = donneesLangues(petit_echantillon)
+kVoisins("anoure",3)
+
+
+
+
+

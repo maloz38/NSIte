@@ -1,0 +1,30 @@
+from abrRecursif import graphe, File, Abr
+from random import randint
+
+def lectureFichier() :
+    l = []
+    f = open("dictionnaire.txt","r",encoding='utf8')
+    mot = f.readline()
+    while mot != "" :
+        mot = mot[:-1]
+        mot = mot.lower()
+        accent = True
+        for c in mot :
+            if c in "éçùêèàï" : accent = False
+        if accent and mot not in l : l.append(mot)
+        mot = f.readline()
+    f.close()
+    return l
+
+
+# Main
+A = Abr()
+l = lectureFichier()
+i = randint(0,len(l)-1)
+mot = l[i]
+A.insere(mot)
+
+A.view()
+
+
+

@@ -1,0 +1,76 @@
+import turtle as t
+from random import randint
+
+def majfenetre(f):
+	"""fonction decorateur, sert principalement à mettre la fenêtre à jour
+	pour éviter que le dessin ne sorte de la figure."""
+	bgx, bgy = 0, 0
+	hdx, hdy = 0, 0
+
+	def g(cote, profondeur,  direction, angle):
+		nonlocal bgx, bgy, hdx, hdy
+		f(cote, profondeur,  direction, angle)
+		x, y = t.position()
+		bgx, bgy = min(bgx, x), min(bgy, y)
+		hdx, hdy = max(hdx, x), max(hdy, y)
+		t.setworldcoordinates(bgx,bgy,hdx,hdy)
+		# on cache la tortue :
+		t.hideturtle()
+		# on choisit au hasard la couleur :
+		t.pencolor((randint(0,255),randint(0,255), randint(0,255)))
+		# épaisseur du trait  :
+		t.pensize(2)
+		# vitesse tortue :
+		t.speed(0)
+	return g
+
+
+def gosper(cote, profondeur,  direction, angle) :
+	if (profondeur == 0) : t.forward(cote)
+	else :
+		cote /= 2
+		profondeur -= 1
+		if(direction ==  -1) :
+			gosper(cote,profondeur, -1, angle)
+			t.left(angle)
+			gosper(cote,profondeur, 1, angle)
+			t.left(2*angle)
+			gosper(cote,profondeur, 1, angle)
+			t.right(angle)
+			gosper(cote,profondeur, -1, angle)
+			t.right(2*angle)
+			gosper(cote,profondeur, -1, angle)
+			gosper(cote,profondeur, -1, angle)
+			t.right(angle)
+			gosper(cote,profondeur, 1, angle)
+			t.left(angle)
+		else :
+			t.right(angle)
+			gosper(cote, profondeur, -1, angle)
+			t.left(angle)
+			gosper(cote, profondeur, 1, angle)
+			gosper(cote, profondeur, 1, angle)
+			t.left(2*angle)
+			gosper(cote, profondeur, 1, angle)
+			t.left(angle)
+			gosper(cote, profondeur, -1, angle)
+			t.right(2*angle)
+			gosper(cote, profondeur, -1, angle)
+			t.right(angle)
+			gosper(cote, profondeur, 1, angle)
+
+# titre de la fenêtre graphique :
+t.title("Courbe de Gosper")
+# dimensions de la fenêtre graphique et position dans l'écran :
+t.setup (width=600, height=600, startx=0, starty=0)
+# orientation intiale de la tête : vers la droite de l'écran :
+t.setheading(0)
+# pour coder les couleurs en rgb :
+t.colormode(255)
+# décorateur pour mise à jour du repère de la fenêtre
+# permet de recentrer le graphique dans la fenêtre lorsqu'il en sort :
+gosper = majfenetre(gosper)
+# on lance gosper :
+gosper(cote = 200, profondeur = 3,  direction = 1, angle = 60)
+# fermeture par clic dans la fenêtre :
+t.exitonclick()

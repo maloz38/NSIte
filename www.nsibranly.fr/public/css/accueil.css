@@ -1,0 +1,208 @@
+body{background-color:#fff;}
+.logo a:hover {
+  color: #555961;
+}
+
+section {
+  font-family: "OpenSans-Light";
+
+}
+
+/* Début Css */
+
+
+.titre p{
+  font-size: 10rem;
+  line-height: normal;
+  font-style: italic;
+  margin:0;
+  padding:0;
+  font-family: "nbArchitektA";
+  animation : auChargementT 1000ms 100ms;
+  position: relative;
+  z-index: 999;
+}
+.titre p :nth-child(n){
+  transition:all 0.5s  ;
+}
+.titre p :nth-child(n):hover{
+  font-weight: bold;
+}
+.titre p :nth-child(1):hover{
+  color:red;
+}
+.titre p :nth-child(2):hover{
+  color:rgb(27, 241, 27);
+}
+.titre p :nth-child(3):hover{
+  color:blue;
+}
+.titre p :nth-child(4):hover{
+  color:yellow;
+}
+.titre p :nth-child(5):hover{
+  color:purple;
+}
+.titre p :nth-child(6):hover{
+  color:rgb(41, 219, 229);
+}
+.titre video{
+  width:600px;
+  height:600px;
+  position:absolute;
+  right:0px;
+  z-index: 0;
+}
+.presentation{
+  font-size: 1em;
+  position: relative;
+  z-index: 999;
+  line-height: normal; 
+  animation : auChargementP 1000ms 100ms;
+}
+@keyframes auChargementT {
+  0% {
+    letter-spacing: -20px;
+  }
+  100% {
+    letter-spacing: 0px;
+  }
+}
+
+@keyframes auChargementP {
+  0% {
+    transform:translateY(-40px)
+  }
+
+  100%{
+    transform:translateY(0px)
+  }
+
+}
+
+@media screen and (max-width: 700px) { 
+  .titre p{
+    font-size: 7em;
+  }       
+}
+@media screen and (max-width: 480px) { 
+  .titre p{
+    font-size: 5em;
+  }  
+  .titre video{
+    width:400px;
+    height:400px;
+  }
+
+}
+@media screen and (max-width: 330px) { 
+  .titre p{
+    font-size: 4em;
+  }  
+  .titre video{
+    width:300px;
+    height:300px;
+  }
+
+}
+@media screen and (max-width: 280px) { 
+  .titre p{
+    font-size: 3em;
+  }  
+}
+/*****************Ancien site*************/
+legend {
+  font-family: "Bohemian Cassidy Free";
+  font-size: 2rem;
+  color:#333
+}
+fieldset {
+  margin:2%;
+  border-radius: 10px;
+  padding:0 5px 5px 10px;
+  border-width: 0px;
+  border-top: 1px solid #333;
+}
+
+ .scroll_conteneur{
+  width:80%;
+  margin: auto;
+}
+
+.scroll_conteneur{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 600px;
+  font-size: 1rem;
+}
+iframe{
+  max-width: 100%;
+  margin:15px;
+}
+
+@media screen and (max-width: 750px) {
+  .presentation , .scroll_conteneur{
+      width:95%;
+      margin: auto;
+  }
+} 
+.presentation a{
+  color:#333;
+  font-weight: bold;
+}
+.lien {
+  position:relative;
+  top:7px; 
+  display: inline-block;
+  width:min-content;
+  height:25px;
+  overflow: hidden;
+  text-align: center;
+  line-height:24px;
+}
+.lien span{
+  position:relative;
+  top:0px;
+  transition: all 1s;
+}
+.lien:hover span{
+  top:-24px;
+}
+.lien .changeFont{
+  font-family: "Silkscreen-Regular";
+  font-size: 1rem;
+}
+.scroll_conteneur .lien:hover span{
+  top:-24px;
+}
+.pjtsUpload {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center;
+  flex-wrap: wrap;
+
+}
+.pjtsUpload div{
+  display:flex;
+  flex-direction: column;
+}
+.pjtsUpload img{ 
+  display:block;
+  padding:10px;
+}
+.pjtsUpload p{
+ margin:0;
+ padding:0;
+ margin: auto;
+}
+.pjtsUpload :hover img{
+
+border: 1px solid transparent;
+box-shadow: -1px 2px 5px #752116,
+              0 -1px 0 white;
+
+}

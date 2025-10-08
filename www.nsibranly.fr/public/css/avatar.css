@@ -1,0 +1,85 @@
+.classe{
+    max-width: 95%;
+    margin:30px auto;
+    padding:0px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.eleves img {
+    width:60px;
+    height:60px;
+    border-radius: 10px;
+
+}
+
+.eleves {
+    width:60px;
+    height:60px;
+    margin:10px;
+    animation : auChargement 2000ms 100ms;
+}
+
+@keyframes auChargement {
+    0% {
+        transform:translateY(-40px)
+      }
+    
+      100%{
+        transform:translateY(0px)
+      }
+  
+}
+
+.eleves a{
+    text-decoration: none;
+    color:#b18c7e;
+}
+
+.eleves:hover{
+	border:1px solid transparent;
+    border-radius: 10px;
+    box-shadow: -1px 2px 5px #752116,0 -1px 0 white;
+}
+
+@media screen and (min-width: 1000px) {     /* -------------traitement si écran d'ordinateur*/
+    
+    .eleves img {
+        width:120px;
+        height:120px;
+        border-radius: 20px;
+    }
+    
+    .eleves {
+        width:120px;
+        height:120px;
+        margin:20px;
+    }
+    .eleves:hover{
+       
+        border-radius: 20px;
+        
+    }
+
+}  
+@media screen and (min-width: 700px) and (max-width: 1000px){     /* -------------traitement si écran d'ordinateur*/
+    
+    .eleves img {
+        width:100px;
+        height:100px;
+        border-radius: 15px;
+    }
+    
+    .eleves {
+        width:100px;
+        height:100px;
+        margin:15px;
+    }
+    .eleves:hover{
+       
+        border-radius: 15px;
+        
+    }
+
+}  

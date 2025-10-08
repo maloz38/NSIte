@@ -1,0 +1,75 @@
+from graphviz import Digraph
+# pip install --user --upgrade pip
+# pip install graphviz
+graphe = Digraph(format = 'png' , filename = 'arbre')
+from random import randint
+
+class File :
+    def __init__(self) :
+        self.l = []
+
+    def __str__(self) :
+        s = "file : "
+        for e in self.l : s += str(e) + " "
+        return s
+
+    def estVide(self) :
+        return self.l == []
+
+    def enfiler(self,e) :
+        self.l.append(e)
+
+    def defiler(self) :
+        if not self.estVide() :
+            return self.l.pop(0)
+
+class Abr :
+
+    liste = []
+
+    def __init__(self, info = None , fg = None , fd = None) :
+        self.info = info
+        self.fg = fg
+        self.fd = fd
+
+    def view(self) :
+        graphe.clear()
+        l = [self]
+        n = 0
+        while l != [] :
+            n = n + 1
+            nd = l.pop(0)
+            nd.num = str(n)
+            graphe.node(nd.num , str(nd.info))
+            if nd.fg != None :
+                l.append(nd.fg)
+            if nd.fd != None :
+                l.append(nd.fd)
+        l = [self]
+        while l != [] :
+            nd = l.pop(0)
+            if nd.fg != None :
+                graphe.edge(nd.num,nd.fg.num)
+                l.append(nd.fg)
+            if nd.fd != None :
+                graphe.edge(nd.num,nd.fd.num)
+                l.append(nd.fd)
+        graphe.view()
+
+
+
+
+
+# main
+A = Abr(255,
+          Abr(50),
+          Abr(300,
+                Abr(260) ,
+                Abr(310)
+                ),
+           )
+A.view()
+
+
+
+

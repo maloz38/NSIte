@@ -1,0 +1,127 @@
+from math import sqrt
+from matplotlib.pyplot import legend,grid,show,scatter
+
+
+def donneesIris(nomFichier : str) -> list:
+    """
+    Paramètres : nom de fichier texte (string)
+    Sortie : liste de liste dont les éléments sont les lignes du fichier
+    """
+    fichier = open(nomFichier,"r",encoding='utf-8')
+    liste = []
+    ligne = fichier.readline()
+    ligne = fichier.readline()
+    while ligne != ""  :
+        ligne = ligne[:-1]
+        ligne = ligne.split(",")
+        ligne.append(None)
+        for i in range(4) :
+            ligne[i] = float(ligne[i])
+        liste.append(ligne)
+        ligne = fichier.readline()
+    fichier.close()
+    return liste
+
+
+def distance(lA , lB):
+    """
+    Paramètres : lA et lB:listes de 4 attributs placés en début de liste
+    Sortie : distance euclidienne pour ces 4 attributs
+    """
+    d = 0
+    for i in range(0,4) :
+        d = d + ( lA[i] - lB[i] )**2
+    return sqrt(d)
+
+def echange(liste , i , j) :
+    n = len(liste)-1
+    if i < 0 or i > n  : return False
+    if j < 0 or j > n  : return False
+    tmp = liste[i]
+    liste[i] = liste[j]
+    liste[j] = tmp
+    return True
+
+
+def triSelection(liste,k) :
+    n = len(liste)
+    for i in range(k) :
+        jMin = i
+        for j in range(i+1,n) :
+            if liste[j][-1]<liste[jMin][-1] :
+                jMin = j
+        echange(liste,i,jMin)
+
+
+def graphique(nom,couleur) :
+    X = []
+    Y = []
+    for i in range(len(donnees)) :
+        if donnees[i][-2] == nom :
+            X.append(donnees[i][2])
+            Y.append(donnees[i][3])
+    scatter(X,Y,c=couleur,label=nom)
+
+def graphiqueResultat(nom,couleur,k) :
+    X = []
+    Y = []
+    for i in range(k) :
+        X.append(donnees[i][2])
+        Y.append(donnees[i][3])
+    scatter(X,Y,c=couleur,label=nom,marker="x")
+
+def nuage(inconnue,k):
+    graphique("setosa",'red')
+    graphique("versicolor",'green')
+    graphique("virginica",'blue')
+    graphiqueResultat("kVoisins",'black',k)
+    scatter(inconnue[2],inconnue[3],c="yellow",label="inconnue")
+    legend()
+    grid(True)
+    show()
+
+def ecritureConsole(k) :
+    dic = {"setosa":0 ,"versicolor":0 , "virginica":0}
+    for i in range(k) :
+        nom = donnees[i][4]
+        dic[nom] = dic[nom] + 1
+    cleMax = "setosa"
+    if dic[cleMax] < dic["versicolor"] : cleMax = "versicolor"
+    if dic[cleMax] < dic["virginica"] : cleMax = "virginica"
+    sortie = cleMax
+    for cle in dic :
+        if dic[cle] == dic[cleMax] and cle != cleMax :
+            sortie = sortie + " ou " + cle
+    resultat =f"""
+Nombres de voisins setosa : {dic['setosa']}
+Nombres de voisins versicolor : {dic['versicolor']}
+Nombres de voisins virginica : {dic['virginica']}
+La fleur inconnue est de la famille : {sortie}
+"""
+    return resultat
+
+
+
+def kVoisins(inconnue,k) :
+    """
+    Paramètres :inconnue, liste contenant les attibuts de la fleur inconnue
+                k (int), nombre des plus proches voisins
+    Sortie : aucun renvoi
+    """
+    for i in range(len(donnees)) :
+        d = distance(donnees[i],inconnue)
+        donnees[i][-1] = d
+    triSelection(donnees,k)
+    resultat = ecritureConsole(k)
+    print(resultat)
+    nuage(inconnue,k)
+
+
+# Main
+donnees = donneesIris("iris.txt")
+kVoisins([5.6,2.8,4.9,1.7,"inconnue"],10)
+
+
+
+
+
